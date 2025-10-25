@@ -15,7 +15,7 @@
 
 ## About Me  
 
-Hi, I'm **Juan Felipe Medina**, a passionate software developer and Information Systems student. I enjoy designing and building full-stack applications, focusing on creating efficient back-end architectures and intuitive front-end experiences. I’m always eager to learn new technologies and develop projects that bring real-world ideas to life.
+Hi, I'm **Juan Felipe Medina**, from colombia and i'm a passionate software developer and Information Systems student. I enjoy designing and building full-stack applications, focusing on creating efficient back-end architectures and intuitive front-end experiences. I’m always eager to learn new technologies and develop projects that bring real-world ideas to life.
   
 
 ###  What I Do  
