@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">
-Hi, I'm Juan Felipe Medina
+Hi 👋, I'm Juan Felipe Medina
 </h1>
 
 <h3 align="center">
@@ -11,7 +11,19 @@ Software Developer | Information Systems Student 🇨🇴
 </h3>
 
 <div align="center">
-<img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="40"/>
+
+<!-- Typing Animation -->
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=3000&pause=1000&color=7A7ADB&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;React+%7C+Angular+%7C+Node;Backend+and+API+Development;Always+Learning+New+Technologies" />
+
+</div>
+
+---
+
+<div align="center">
+
+<!-- Profile Views -->
+<img src="https://komarev.com/ghpvc/?username=Sekkon0906&label=Profile%20views&color=0e75b6&style=flat" />
+
 </div>
 
 ---
@@ -117,6 +129,38 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
+# 🏆 GitHub Trophies
+
+<p align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=Sekkon0906&theme=tokyonight&row=1&column=7"/>
+</p>
+
+---
+
+# 🚀 Featured Projects
+
+<div align="center">
+
+<a href="https://github.com/Sekkon0906">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=REPOSITORY_NAME&theme=tokyonight"/>
+</a>
+
+<a href="https://github.com/Sekkon0906">
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=REPOSITORY_NAME2&theme=tokyonight"/>
+</a>
+
+</div>
+
+---
+
+# 🌐 3D Contribution Graph
+
+<p align="center">
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sekkon0906&theme=tokyonight"/>
+</p>
+
+---
+
 # 🐍 Contributions Snake
 
 <p align="center">
@@ -129,7 +173,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 <div align="center">
 
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail)](mailto:abd.juan.medina@estudiantesunibague.edu.co)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail)](mailto:abd.medinapipe123@gmail.com)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/juan-medina-40b3ba269)
 
