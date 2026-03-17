@@ -38,19 +38,19 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 🚀 What I Do
+#  What I Do
 
-- 🔧 Full-Stack Development  
-- 🌐 Web Applications  
-- 🔗 API Integration  
-- ⚡ Backend Architecture  
-- 🎨 Frontend Interfaces  
+-  Full-Stack Development  
+-  Web Applications  
+-  API Integration  
+-  Backend Architecture  
+-  Frontend Interfaces  
 
 ---
 
-# 🛠 Tech Stack
+# Tech Stack
 
-## 💻 Languages
+## Languages
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
@@ -59,7 +59,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-## 🌐 Frontend
+## Frontend
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
 ![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular)
@@ -68,21 +68,21 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-## ⚙️ Backend
+## Backend
 
 ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs)
 ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel)
 
 ---
 
-## 🗄 Databases
+## Databases
 
 ![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql)
 
 ---
 
-## 🧰 Tools
+## Tools
 
 ![Git](https://img.shields.io/badge/Git-F05033?style=for-the-badge&logo=git)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker)
@@ -97,7 +97,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 📊 GitHub Stats
+# GitHub Stats
 
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api?username=Sekkon0906&show_icons=true&count_private=true&theme=tokyonight"/>
@@ -105,7 +105,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 🔥 GitHub Streak
+# GitHub Streak
 
 <p align="center">
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=Sekkon0906&count_private=true&theme=tokyonight"/>
@@ -113,7 +113,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 📚 Most Used Languages
+# Most Used Languages
 
 <p align="center">
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sekkon0906&layout=compact&theme=tokyonight"/>
@@ -121,7 +121,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 📈 GitHub Activity Graph
+# GitHub Activity Graph
 
 <p align="center">
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sekkon0906&theme=tokyo-night"/>
@@ -129,7 +129,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 🏆 GitHub Trophies
+# GitHub Trophies
 
 <p align="center">
 <img src="https://github-profile-trophy.vercel.app/?username=Sekkon0906&theme=tokyonight&row=1&column=7"/>
@@ -137,23 +137,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 🚀 Featured Projects
-
-<div align="center">
-
-<a href="https://github.com/Sekkon0906">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=REPOSITORY_NAME&theme=tokyonight"/>
-</a>
-
-<a href="https://github.com/Sekkon0906">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=REPOSITORY_NAME2&theme=tokyonight"/>
-</a>
-
-</div>
-
----
-
-# 🌐 3D Contribution Graph
+# Contribution Graph
 
 <p align="center">
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sekkon0906&theme=tokyonight"/>
@@ -161,7 +145,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 🐍 Contributions Snake
+# Contributions Snake
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg"/>
@@ -169,7 +153,7 @@ I'm always motivated to **learn new technologies**, solve problems, and build pr
 
 ---
 
-# 📬 Contact Me
+# Contact Me
 
 <div align="center">
 
