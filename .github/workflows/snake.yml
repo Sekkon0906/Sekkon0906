@@ -21,9 +21,11 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Same black / white / red ramp the generated cards use, so the
+          # snake reads as part of the profile instead of a bolted-on widget.
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+            dist/github-snake.svg?color_snake=%23e10600&color_dots=%23ebedf0,%234d4d4d,%23b3b3b3,%23ffffff,%23e10600
+            dist/github-snake-dark.svg?color_snake=%23e10600&color_dots=%23161616,%234d4d4d,%23b3b3b3,%23ffffff,%23e10600
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
