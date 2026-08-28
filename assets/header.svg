@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 152" width="900" height="152" role="img" aria-label="Clean architecture, scalable backends, sharp interfaces — a request travelling from client to API to service to data">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 176" width="900" height="176" role="img" aria-label="Clean architecture, scalable backends, sharp interfaces — a request travelling from client to API to service to data">
   <title>Clean architecture · Scalable backends · Sharp interfaces</title>
 
   <defs>
@@ -17,7 +17,7 @@
     </linearGradient>
 
     <clipPath id="panel">
-      <rect x="1" y="1" width="898" height="150" rx="12" />
+      <rect x="1" y="1" width="898" height="174" rx="12" />
     </clipPath>
   </defs>
 
@@ -27,22 +27,24 @@
     }
     .tagline { font-size: 13px; letter-spacing: 3.4px; fill: #8b8b8b; }
     .node-label { font-size: 10px; letter-spacing: 2.2px; fill: #6e6e6e; }
+    .tagline-es { font-size: 10.5px; letter-spacing: 2.6px; fill: #5a5a5a; }
   </style>
 
   <!-- Panel -->
-  <rect x="1" y="1" width="898" height="150" rx="12" fill="#0b0b0b" stroke="#232323" stroke-width="1" />
+  <rect x="1" y="1" width="898" height="174" rx="12" fill="#0b0b0b" stroke="#232323" stroke-width="1" />
 
   <g clip-path="url(#panel)">
     <!-- Slow ambient sweep -->
-    <rect x="-500" y="0" width="500" height="152" fill="url(#sweep)">
+    <rect x="-500" y="0" width="500" height="176" fill="url(#sweep)">
       <animate attributeName="x" values="-500;900" dur="9s" repeatCount="indefinite" />
     </rect>
   </g>
 
   <!-- Tagline -->
-  <text class="mono tagline" x="450" y="47" text-anchor="middle">CLEAN ARCHITECTURE · SCALABLE BACKENDS · SHARP INTERFACES</text>
+  <text class="mono tagline" x="450" y="44" text-anchor="middle">CLEAN ARCHITECTURE · SCALABLE BACKENDS · SHARP INTERFACES</text>
+  <text class="mono tagline-es" x="450" y="66" text-anchor="middle">ARQUITECTURA LIMPIA · BACKENDS ESCALABLES · INTERFACES PRECISAS</text>
 
-  <line x1="250" y1="63" x2="650" y2="63" stroke="url(#rule)" stroke-width="1" />
+  <line x1="250" y1="86" x2="650" y2="86" stroke="url(#rule)" stroke-width="1" />
 
   <!-- ── Pipeline ───────────────────────────────────────────────
        A request enters at CLIENT and travels to DATA in 4.5s.
@@ -50,10 +52,10 @@
        below are the fraction of the loop at which that happens. -->
   <g>
     <!-- Static track -->
-    <line x1="110" y1="105" x2="790" y2="105" stroke="#262626" stroke-width="2" stroke-linecap="round" />
+    <line x1="110" y1="128" x2="790" y2="128" stroke="#262626" stroke-width="2" stroke-linecap="round" />
 
     <!-- Travelling pulse: a short dash sliding along the track -->
-    <line x1="110" y1="105" x2="790" y2="105"
+    <line x1="110" y1="128" x2="790" y2="128"
           stroke="#e10600" stroke-width="2.5" stroke-linecap="round"
           stroke-dasharray="64 680" stroke-opacity="1">
       <animate attributeName="stroke-dashoffset" from="64" to="-680" dur="4.5s" repeatCount="indefinite" />
@@ -61,48 +63,48 @@
 
     <!-- CLIENT -->
     <g>
-      <circle cx="110" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+      <circle cx="110" cy="128" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
         <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
-      <text class="mono node-label" x="110" y="136" text-anchor="middle">CLIENT
+      <text class="mono node-label" x="110" y="159" text-anchor="middle">CLIENT
         <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.02;0.06;0.18;1" dur="4.5s" repeatCount="indefinite" />
       </text>
     </g>
 
     <!-- API -->
     <g>
-      <circle cx="336" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+      <circle cx="336" cy="128" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
         <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
-      <text class="mono node-label" x="336" y="136" text-anchor="middle">API
+      <text class="mono node-label" x="336" y="159" text-anchor="middle">API
         <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.29;0.33;0.45;1" dur="4.5s" repeatCount="indefinite" />
       </text>
     </g>
 
     <!-- SERVICE -->
     <g>
-      <circle cx="562" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+      <circle cx="562" cy="128" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
         <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
-      <text class="mono node-label" x="562" y="136" text-anchor="middle">SERVICE
+      <text class="mono node-label" x="562" y="159" text-anchor="middle">SERVICE
         <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.58;0.62;0.74;1" dur="4.5s" repeatCount="indefinite" />
       </text>
     </g>
 
     <!-- DATA -->
     <g>
-      <circle cx="790" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+      <circle cx="790" cy="128" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
         <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
-      <text class="mono node-label" x="790" y="136" text-anchor="middle">DATA
+      <text class="mono node-label" x="790" y="159" text-anchor="middle">DATA
         <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
       </text>
     </g>

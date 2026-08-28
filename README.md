@@ -6,6 +6,8 @@
 
 **Software Developer** &nbsp;·&nbsp; **Information Systems Student** &nbsp;·&nbsp; **Colombia**
 
+<sub>Desarrollador de Software &nbsp;·&nbsp; Estudiante de Ingeniería de Sistemas &nbsp;·&nbsp; Colombia</sub>
+
 <br>
 
 <img width="88%" alt="Clean architecture, scalable backends, sharp interfaces" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/header.svg" />
@@ -36,31 +38,37 @@
 
 <br>
 
-## About
+## About &nbsp;/&nbsp; Sobre mí
 
 I'm a software developer and information systems student based in Colombia. I build full-stack
 applications with a focus on clean backend architecture and interfaces that stay out of the way.
-
 My work spans SaaS platforms with AI agents that execute real actions, university-scale digital
 wallets, clinic management systems, and inventory platforms built on Clean Architecture. I care
 about maintainable code, systems that scale past the demo, and shipping things people actually use.
 
+<sub>Soy desarrollador de software y estudiante de ingeniería de sistemas en Colombia. Construyo
+aplicaciones full-stack con foco en arquitectura backend limpia e interfaces que no estorban.
+Mi trabajo va desde plataformas SaaS con agentes de IA que ejecutan acciones reales hasta billeteras
+digitales a escala universitaria, sistemas de gestión clínica y plataformas de inventario sobre
+Clean Architecture. Me importa el código mantenible, los sistemas que escalan más allá del demo,
+y entregar cosas que la gente realmente usa.</sub>
+
 <div align="center">
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 </div>
 
 <br>
 
-## Currently Building
+## Currently Building &nbsp;/&nbsp; En qué estoy trabajando
 
 <div align="center">
 
-| Project | Where it stands | Status |
+| Project · Proyecto | Where it stands · En qué va | Status · Estado |
 |:--|:--|:--:|
-| **GESTEK — Event OS** | Gestbot agent actions, white-label rollout | `Active` |
-| **Consultorio Estético** | Migrating modules to the new Next.js structure | `In migration` |
-| **Walnut / Ardys** | Points engine and rewards flow built, on hold | `Paused` |
-| **CoffeeOps** | Inventory and batch tracking shipped, on hold | `Paused` |
+| **GESTEK — Event OS** | Gestbot agent actions, white-label rollout<br><sub>Acciones del agente Gestbot, despliegue marca blanca</sub> | `Active · Activo` |
+| **Consultorio Estético** | Migrating modules to the new Next.js structure<br><sub>Migrando módulos a la nueva estructura Next.js</sub> | `In migration · En migración` |
+| **Walnut / Ardys** | Points engine and rewards flow built, on hold<br><sub>Motor de puntos y flujo de recompensas listos, en pausa</sub> | `Paused · En pausa` |
+| **CoffeeOps** | Inventory and batch tracking shipped, on hold<br><sub>Inventario y trazabilidad de lotes entregados, en pausa</sub> | `Paused · En pausa` |
 
 </div>
 
@@ -70,61 +78,18 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <br>
 
-## Featured Projects
+## Featured Projects &nbsp;/&nbsp; Proyectos destacados
 
 <div align="center">
-<table>
-<tr>
-<td width="50%" valign="top">
 
-<a href="https://github.com/Sekkon0906/GestorEventosMarcaBlanca">
-<img width="100%" alt="GESTEK — Event OS" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-GestorEventosMarcaBlanca.svg" />
-</a>
+| Project · Proyecto | What it is · Qué es | Stack |
+|:--|:--|:--|
+| [**GESTEK — Event OS**](https://github.com/Sekkon0906/GestorEventosMarcaBlanca) | White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, MercadoPago payments, role-based teams, agenda, API and webhooks.<br><sub>SaaS de eventos marca blanca con Gestbot, un agente de IA que ejecuta acciones reales. Boletería con QR, pagos MercadoPago, equipos con roles, agenda, API y webhooks.</sub> | `Node.js` `Express` `MongoDB` |
+| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br><sub>Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.</sub> | `React` `Node.js` `PostgreSQL` `Docker` |
+| [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, secured with Auth0.<br><sub>Plataforma para clínica estética: agendamiento de citas, catálogo de procedimientos, gestión de usuarios y panel de administración, con autenticación Auth0.</sub> | `Next.js` `TypeScript` `React` `Auth0` |
+| [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br><sub>SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.</sub> | `Node.js` `Express` `MongoDB` |
 
-<p align="center">
-<img src="https://skillicons.dev/icons?i=js,nodejs,express,mongodb&theme=dark" height="30" />
-</p>
-
-</td>
-<td width="50%" valign="top">
-
-<a href="https://github.com/Sekkon0906/wallnut">
-<img width="100%" alt="Walnut — University Wallet" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-wallnut.svg" />
-</a>
-
-<p align="center">
-<img src="https://skillicons.dev/icons?i=react,nodejs,postgres,docker&theme=dark" height="30" />
-</p>
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-<a href="https://github.com/Sekkon0906/consultorioEstetico-vm">
-<img width="100%" alt="Consultorio Estético" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-consultorioEstetico-vm.svg" />
-</a>
-
-<p align="center">
-<img src="https://skillicons.dev/icons?i=nextjs,ts,react,vercel&theme=dark" height="30" />
-</p>
-
-</td>
-<td width="50%" valign="top">
-
-<a href="https://github.com/Sekkon0906/Coffee-management">
-<img width="100%" alt="CoffeeOps — Management" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-Coffee-management.svg" />
-</a>
-
-<p align="center">
-<img src="https://skillicons.dev/icons?i=js,nodejs,mongodb,express&theme=dark" height="30" />
-</p>
-
-</td>
-</tr>
-</table>
-
-<sub><a href="https://github.com/Sekkon0906?tab=repositories">See all repositories</a></sub>
+<sub><a href="https://github.com/Sekkon0906?tab=repositories">See all repositories · Ver todos los repositorios</a></sub>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -132,29 +97,29 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <br>
 
-## Tech Stack
+## Tech Stack &nbsp;/&nbsp; Tecnologías
 
 <div align="center">
 
-**Languages**
+**Languages** &nbsp;·&nbsp; <sub>Lenguajes</sub>
 
 <img src="https://skillicons.dev/icons?i=java,cpp,python,js,ts,php&theme=dark" />
 
 <br><br>
 
-**Frontend**
+**Frontend** &nbsp;·&nbsp; <sub>Frontend</sub>
 
 <img src="https://skillicons.dev/icons?i=react,angular,nextjs,vue,tailwind,html,css&theme=dark" />
 
 <br><br>
 
-**Backend & Data**
+**Backend & Data** &nbsp;·&nbsp; <sub>Backend y datos</sub>
 
 <img src="https://skillicons.dev/icons?i=nodejs,express,laravel,mysql,postgres,mongodb,firebase&theme=dark" />
 
 <br><br>
 
-**DevOps & Tools**
+**DevOps & Tools** &nbsp;·&nbsp; <sub>DevOps y herramientas</sub>
 
 <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,postman,vercel,idea,androidstudio,vscode,figma&theme=dark" />
 
@@ -164,15 +129,15 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <br>
 
-## GitHub Analytics
+## GitHub Analytics &nbsp;/&nbsp; Estadísticas
 
 <div align="center">
 
-<img width="96%" alt="GitHub overview" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
+<img width="96%" alt="GitHub overview / Resumen de GitHub" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
 
 <br><br>
 
-<img width="96%" alt="Language distribution" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
+<img width="96%" alt="Language distribution / Distribución por lenguaje" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -180,27 +145,11 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <br>
 
-## Contributions
+## Contributions &nbsp;/&nbsp; Contribuciones
 
 <div align="center">
 
-<details open>
-<summary><b>Contribution Grid</b> &nbsp;—&nbsp; the real one</summary>
-<br>
-<img width="96%" alt="Contribution grid" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
-<br><br>
-</details>
-
-<details>
-<summary><b>Snake</b> &nbsp;—&nbsp; watch it eat the grid</summary>
-<br>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/output/github-snake.svg" />
-  <img width="100%" alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/output/github-snake-dark.svg" />
-</picture>
-<br><br>
-</details>
+<img width="96%" alt="Contribution grid / Grilla de contribuciones" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -208,11 +157,13 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <br>
 
-## Get in Touch
+## Get in Touch &nbsp;/&nbsp; Contacto
 
 <div align="center">
 
 Open to internships, freelance work, and collaboration on products worth building.
+
+<sub>Abierto a prácticas, trabajo freelance y colaboración en productos que valga la pena construir.</sub>
 
 <br>
 
