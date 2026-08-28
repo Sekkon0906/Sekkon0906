@@ -55,12 +55,12 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <div align="center">
 
-| Project | Focus right now | Status |
+| Project | Where it stands | Status |
 |:--|:--|:--:|
 | **GESTEK — Event OS** | Gestbot agent actions, white-label rollout | `Active` |
 | **Consultorio Estético** | Migrating modules to the new Next.js structure | `In migration` |
-| **Walnut / Ardys** | Points engine and rewards redemption flow | `Active` |
-| **CoffeeOps** | Batch traceability and real-time analytics | `Iterating` |
+| **Walnut / Ardys** | Points engine and rewards flow built, on hold | `Paused` |
+| **CoffeeOps** | Inventory and batch tracking shipped, on hold | `Paused` |
 
 </div>
 
@@ -221,7 +221,7 @@ about maintainable code, systems that scale past the demo, and shipping things p
 <details open>
 <summary><b>Contribution Grid</b> &nbsp;—&nbsp; the real one</summary>
 <br>
-<img width="94%" src="https://ghchart.rshah.org/8b8b8b/Sekkon0906" />
+<img width="94%" alt="Contribution grid" src="https://ghchart.rshah.org/151515/Sekkon0906" />
 <br><br>
 </details>
 
@@ -267,7 +267,7 @@ Open to internships, freelance work, and collaboration on products worth buildin
 </a>
 <br>
 <a href="mailto:Juan.Medina@estudiantesunibague.edu.co">
-<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-0d1117?style=flat-square&logo=maildotru&logoColor=8b8b8b&labelColor=0d1117&color=0d1117" />
+<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-2e2e2e?style=for-the-badge&logo=maildotru&logoColor=bbbbbb&labelColor=2e2e2e" />
 </a>
 <br>
 <a href="https://www.linkedin.com/in/juan-medina-40b3ba269">
