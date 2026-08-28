@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 152" width="900" height="152" role="img" aria-label="Clean architecture, scalable backends, sharp interfaces — a request travelling from client to API to service to data">
+  <title>Clean architecture · Scalable backends · Sharp interfaces</title>
+
+  <defs>
+    <!-- Ambient sweep that drifts across the panel -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Hairline rule that fades out towards both ends -->
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <clipPath id="panel">
+      <rect x="1" y="1" width="898" height="150" rx="12" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .mono {
+      font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    }
+    .tagline { font-size: 13px; letter-spacing: 3.4px; fill: #8b8b8b; }
+    .node-label { font-size: 10px; letter-spacing: 2.2px; fill: #6e6e6e; }
+  </style>
+
+  <!-- Panel -->
+  <rect x="1" y="1" width="898" height="150" rx="12" fill="#0d1117" stroke="#242424" stroke-width="1" />
+
+  <g clip-path="url(#panel)">
+    <!-- Slow ambient sweep -->
+    <rect x="-500" y="0" width="500" height="152" fill="url(#sweep)">
+      <animate attributeName="x" values="-500;900" dur="9s" repeatCount="indefinite" />
+    </rect>
+  </g>
+
+  <!-- Tagline -->
+  <text class="mono tagline" x="450" y="47" text-anchor="middle">CLEAN ARCHITECTURE · SCALABLE BACKENDS · SHARP INTERFACES</text>
+
+  <line x1="250" y1="63" x2="650" y2="63" stroke="url(#rule)" stroke-width="1" />
+
+  <!-- ── Pipeline ───────────────────────────────────────────────
+       A request enters at CLIENT and travels to DATA in 4.5s.
+       Each node lights up as the pulse reaches it; the keyTimes
+       below are the fraction of the loop at which that happens. -->
+  <g>
+    <!-- Static track -->
+    <line x1="110" y1="105" x2="790" y2="105" stroke="#262626" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Travelling pulse: a short dash sliding along the track -->
+    <line x1="110" y1="105" x2="790" y2="105"
+          stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+          stroke-dasharray="64 680" stroke-opacity="0.9">
+      <animate attributeName="stroke-dashoffset" from="64" to="-680" dur="4.5s" repeatCount="indefinite" />
+    </line>
+
+    <!-- CLIENT -->
+    <g>
+      <circle cx="110" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
+        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+      <text class="mono node-label" x="110" y="136" text-anchor="middle">CLIENT
+        <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.02;0.06;0.18;1" dur="4.5s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+    <!-- API -->
+    <g>
+      <circle cx="336" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
+        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+      <text class="mono node-label" x="336" y="136" text-anchor="middle">API
+        <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.29;0.33;0.45;1" dur="4.5s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+    <!-- SERVICE -->
+    <g>
+      <circle cx="562" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
+        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+      <text class="mono node-label" x="562" y="136" text-anchor="middle">SERVICE
+        <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.58;0.62;0.74;1" dur="4.5s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+    <!-- DATA -->
+    <g>
+      <circle cx="790" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
+        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+      <text class="mono node-label" x="790" y="136" text-anchor="middle">DATA
+        <animate attributeName="fill" values="#6e6e6e;#6e6e6e;#ffffff;#6e6e6e;#6e6e6e" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
+      </text>
+    </g>
+  </g>
+
+</svg>
