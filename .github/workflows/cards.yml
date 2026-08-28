@@ -1,0 +1,50 @@
+name: Generate Profile Cards
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily, a few hours after the snake
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/generate-cards.mjs"
+      - ".github/workflows/cards.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Render cards
+        env:
+          # A PAT with read:user makes private contributions count too.
+          # Falls back to the built-in token, which sees public activity only.
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: node scripts/generate-cards.mjs
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets; then
+            echo "Cards unchanged, nothing to commit."
+            exit 0
+          fi
+          git add assets
+          git commit -m "Refresh profile cards"
+          git push

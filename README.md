@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=160&color=0:000000,60:1c1c1c,100:3a3a3a&section=header" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=150&color=0:000000,55:1a1a1a,100:6b0300&section=header" />
 
 # Juan Felipe Medina
 
@@ -19,7 +19,7 @@
 <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=000000" />
 </a>
 <a href="mailto:juan.medina@hytrex.co">
-<img src="https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=000000" />
+<img src="https://img.shields.io/badge/Email-E10600?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=E10600" />
 </a>
 <a href="https://instagram.com/felipe_medina_9">
 <img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=white&labelColor=000000" />
@@ -27,10 +27,10 @@
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=Sekkon0906&label=Visitors&color=1c1c1c&style=flat-square" />
-<img src="https://img.shields.io/github/followers/Sekkon0906?label=Followers&style=flat-square&color=1c1c1c&labelColor=000000&logo=github&logoColor=white" />
+<img src="https://komarev.com/ghpvc/?username=Sekkon0906&label=Visitors&color=E10600&style=flat-square" />
+<img src="https://img.shields.io/github/followers/Sekkon0906?label=Followers&style=flat-square&color=E10600&labelColor=000000&logo=github&logoColor=white" />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
 </div>
 
@@ -46,7 +46,7 @@ wallets, clinic management systems, and inventory platforms built on Clean Archi
 about maintainable code, systems that scale past the demo, and shipping things people actually use.
 
 <div align="center">
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 </div>
 
 <br>
@@ -65,7 +65,7 @@ about maintainable code, systems that scale past the demo, and shipping things p
 </div>
 
 <div align="center">
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 </div>
 
 <br>
@@ -77,15 +77,9 @@ about maintainable code, systems that scale past the demo, and shipping things p
 <tr>
 <td width="50%" valign="top">
 
-<h3 align="center">GESTEK — Event OS</h3>
-
-<p align="center">
 <a href="https://github.com/Sekkon0906/GestorEventosMarcaBlanca">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=GestorEventosMarcaBlanca&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&icon_color=999999&text_color=aaaaaa" />
+<img width="100%" alt="GESTEK — Event OS" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-GestorEventosMarcaBlanca.svg" />
 </a>
-</p>
-
-<p align="center"><sub>White-label SaaS for event management with <b>Gestbot</b>, an AI agent that executes real actions against the platform. QR ticketing, MercadoPago payments, role-based teams, agenda, public API + webhooks, and a 14-day Pro trial.</sub></p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=js,nodejs,express,mongodb&theme=dark" height="30" />
@@ -94,15 +88,9 @@ about maintainable code, systems that scale past the demo, and shipping things p
 </td>
 <td width="50%" valign="top">
 
-<h3 align="center">Walnut — University Wallet</h3>
-
-<p align="center">
 <a href="https://github.com/Sekkon0906/wallnut">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=wallnut&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&icon_color=999999&text_color=aaaaaa" />
+<img width="100%" alt="Walnut — University Wallet" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-wallnut.svg" />
 </a>
-</p>
-
-<p align="center"><sub>Gamified digital wallet for students, faculty and admins. The <b>Ardys</b> points system drives event participation and rewards, merging academic management, a campus digital economy, and social interaction in one platform.</sub></p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=react,nodejs,postgres,docker&theme=dark" height="30" />
@@ -113,15 +101,9 @@ about maintainable code, systems that scale past the demo, and shipping things p
 <tr>
 <td width="50%" valign="top">
 
-<h3 align="center">Consultorio Estético</h3>
-
-<p align="center">
 <a href="https://github.com/Sekkon0906/consultorioEstetico-vm">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=consultorioEstetico-vm&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&icon_color=999999&text_color=aaaaaa" />
+<img width="100%" alt="Consultorio Estético" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-consultorioEstetico-vm.svg" />
 </a>
-</p>
-
-<p align="center"><sub>Web platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, with Auth0 authentication and a responsive, deliberately warm visual identity. Currently migrating modules.</sub></p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=nextjs,ts,react,vercel&theme=dark" height="30" />
@@ -130,15 +112,9 @@ about maintainable code, systems that scale past the demo, and shipping things p
 </td>
 <td width="50%" valign="top">
 
-<h3 align="center">CoffeeOps — Management</h3>
-
-<p align="center">
 <a href="https://github.com/Sekkon0906/Coffee-management">
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=Sekkon0906&repo=Coffee-management&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=ffffff&icon_color=999999&text_color=aaaaaa" />
+<img width="100%" alt="CoffeeOps — Management" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/repo-Coffee-management.svg" />
 </a>
-</p>
-
-<p align="center"><sub>SaaS for coffee shops and producers. Centralizes inventory, batch traceability, suppliers, documents, team and real-time analytics, giving operators control over a supply chain that is usually tracked on paper.</sub></p>
 
 <p align="center">
 <img src="https://skillicons.dev/icons?i=js,nodejs,mongodb,express&theme=dark" height="30" />
@@ -150,7 +126,7 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <sub><a href="https://github.com/Sekkon0906?tab=repositories">See all repositories</a></sub>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
 </div>
 
@@ -182,7 +158,7 @@ about maintainable code, systems that scale past the demo, and shipping things p
 
 <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,postman,vercel,idea,androidstudio,vscode,figma&theme=dark" />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
 </div>
 
@@ -191,24 +167,14 @@ about maintainable code, systems that scale past the demo, and shipping things p
 ## GitHub Analytics
 
 <div align="center">
-<table>
-<tr>
-<td width="50%">
-<img width="100%" src="https://github-readme-stats.vercel.app/api?username=Sekkon0906&show_icons=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=aaaaaa&icon_color=999999&ring_color=ffffff" />
-</td>
-<td width="50%">
-<img width="100%" src="https://github-readme-streak-stats.demolab.com/?user=Sekkon0906&hide_border=true&background=0d1117&stroke=2a2a2a&ring=ffffff&fire=ffffff&currStreakNum=ffffff&sideNums=aaaaaa&currStreakLabel=999999&sideLabels=999999&dates=666666" />
-</td>
-</tr>
-</table>
 
-<img width="420" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sekkon0906&layout=compact&hide_border=true&bg_color=0d1117&title_color=ffffff&text_color=aaaaaa&langs_count=8" />
+<img width="96%" alt="GitHub overview" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
 
 <br><br>
 
-<img width="96%" src="https://github-readme-activity-graph.vercel.app/graph?username=Sekkon0906&bg_color=0d1117&color=aaaaaa&line=ffffff&point=ffffff&area=true&area_color=2a2a2a&hide_border=true&custom_title=Contribution%20Activity" />
+<img width="96%" alt="Language distribution" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
 </div>
 
@@ -221,7 +187,7 @@ about maintainable code, systems that scale past the demo, and shipping things p
 <details open>
 <summary><b>Contribution Grid</b> &nbsp;—&nbsp; the real one</summary>
 <br>
-<img width="94%" alt="Contribution grid" src="https://ghchart.rshah.org/151515/Sekkon0906" />
+<img width="96%" alt="Contribution grid" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
 <br><br>
 </details>
 
@@ -236,19 +202,7 @@ about maintainable code, systems that scale past the demo, and shipping things p
 <br><br>
 </details>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
-
-</div>
-
-<br>
-
-## Trophies
-
-<div align="center">
-
-<img width="92%" src="https://github-profile-trophy.vercel.app/?username=Sekkon0906&theme=darkhub&no-bg=true&no-frame=true&margin-w=6&margin-h=6&column=7" />
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:ffffff,100:000000&height=2" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
 </div>
 
@@ -263,11 +217,11 @@ Open to internships, freelance work, and collaboration on products worth buildin
 <br>
 
 <a href="mailto:juan.medina@hytrex.co">
-<img src="https://img.shields.io/badge/juan.medina@hytrex.co-000000?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=000000" />
+<img src="https://img.shields.io/badge/juan.medina@hytrex.co-E10600?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=E10600" />
 </a>
 <br>
 <a href="mailto:Juan.Medina@estudiantesunibague.edu.co">
-<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-2e2e2e?style=for-the-badge&logo=maildotru&logoColor=bbbbbb&labelColor=2e2e2e" />
+<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-1c1c1c?style=for-the-badge&logo=maildotru&logoColor=bbbbbb&labelColor=1c1c1c" />
 </a>
 <br>
 <a href="https://www.linkedin.com/in/juan-medina-40b3ba269">
@@ -280,6 +234,6 @@ Open to internships, freelance work, and collaboration on products worth buildin
 
 <br>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=120&color=0:3a3a3a,40:1c1c1c,100:000000&section=footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:6b0300,45:1a1a1a,100:000000&section=footer" />
 
 </div>
