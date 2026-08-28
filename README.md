@@ -6,11 +6,11 @@
 
 **Software Developer** &nbsp;·&nbsp; **Information Systems Student** &nbsp;·&nbsp; **Colombia**
 
-<sub>Desarrollador de Software &nbsp;·&nbsp; Estudiante de Ingeniería de Sistemas &nbsp;·&nbsp; Colombia</sub>
+*Desarrollador de Software &nbsp;·&nbsp; Estudiante de Ingeniería de Sistemas &nbsp;·&nbsp; Colombia*
 
 <br>
 
-<img width="88%" alt="Clean architecture, scalable backends, sharp interfaces" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/header.svg" />
+<img width="100%" alt="Clean architecture, scalable backends, sharp interfaces" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/header.svg" />
 
 <br><br>
 
@@ -46,12 +46,12 @@ My work spans SaaS platforms with AI agents that execute real actions, universit
 wallets, clinic management systems, and inventory platforms built on Clean Architecture. I care
 about maintainable code, systems that scale past the demo, and shipping things people actually use.
 
-<sub>Soy desarrollador de software y estudiante de ingeniería de sistemas en Colombia. Construyo
+*Soy desarrollador de software y estudiante de ingeniería de sistemas en Colombia. Construyo
 aplicaciones full-stack con foco en arquitectura backend limpia e interfaces que no estorban.
 Mi trabajo va desde plataformas SaaS con agentes de IA que ejecutan acciones reales hasta billeteras
 digitales a escala universitaria, sistemas de gestión clínica y plataformas de inventario sobre
 Clean Architecture. Me importa el código mantenible, los sistemas que escalan más allá del demo,
-y entregar cosas que la gente realmente usa.</sub>
+y entregar cosas que la gente realmente usa.*
 
 <div align="center">
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
@@ -65,10 +65,10 @@ y entregar cosas que la gente realmente usa.</sub>
 
 | Project · Proyecto | Where it stands · En qué va | Status · Estado |
 |:--|:--|:--:|
-| **GESTEK — Event OS** | Gestbot agent actions, white-label rollout<br><sub>Acciones del agente Gestbot, despliegue marca blanca</sub> | `Active · Activo` |
-| **Consultorio Estético** | Migrating modules to the new Next.js structure<br><sub>Migrando módulos a la nueva estructura Next.js</sub> | `In migration · En migración` |
-| **Walnut / Ardys** | Points engine and rewards flow built, on hold<br><sub>Motor de puntos y flujo de recompensas listos, en pausa</sub> | `Paused · En pausa` |
-| **CoffeeOps** | Inventory and batch tracking shipped, on hold<br><sub>Inventario y trazabilidad de lotes entregados, en pausa</sub> | `Paused · En pausa` |
+| **GESTEK — Event OS** | Gestbot agent actions, white-label rollout<br>*Acciones del agente Gestbot, despliegue marca blanca* | `Active · Activo` |
+| **Consultorio Estético** | Migrating modules to the new Next.js structure<br>*Migrando módulos a la nueva estructura Next.js* | `In migration · En migración` |
+| **Walnut / Ardys** | Points engine and rewards flow built, on hold<br>*Motor de puntos y flujo de recompensas listos, en pausa* | `Paused · En pausa` |
+| **CoffeeOps** | Inventory and batch tracking shipped, on hold<br>*Inventario y trazabilidad de lotes entregados, en pausa* | `Paused · En pausa` |
 
 </div>
 
@@ -84,12 +84,12 @@ y entregar cosas que la gente realmente usa.</sub>
 
 | Project · Proyecto | What it is · Qué es | Stack |
 |:--|:--|:--|
-| [**GESTEK — Event OS**](https://github.com/Sekkon0906/GestorEventosMarcaBlanca) | White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, MercadoPago payments, role-based teams, agenda, API and webhooks.<br><sub>SaaS de eventos marca blanca con Gestbot, un agente de IA que ejecuta acciones reales. Boletería con QR, pagos MercadoPago, equipos con roles, agenda, API y webhooks.</sub> | `Node.js` `Express` `MongoDB` |
-| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br><sub>Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.</sub> | `React` `Node.js` `PostgreSQL` `Docker` |
-| [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, secured with Auth0.<br><sub>Plataforma para clínica estética: agendamiento de citas, catálogo de procedimientos, gestión de usuarios y panel de administración, con autenticación Auth0.</sub> | `Next.js` `TypeScript` `React` `Auth0` |
-| [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br><sub>SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.</sub> | `Node.js` `Express` `MongoDB` |
+| [**GESTEK — Event OS**](https://github.com/Sekkon0906/GestorEventosMarcaBlanca) | White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, MercadoPago payments, role-based teams, agenda, API and webhooks.<br>*SaaS de eventos marca blanca con Gestbot, un agente de IA que ejecuta acciones reales. Boletería con QR, pagos MercadoPago, equipos con roles, agenda, API y webhooks.* | `Node.js` `Express` `MongoDB` |
+| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br>*Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.* | `React` `Node.js` `PostgreSQL` `Docker` |
+| [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, secured with Auth0.<br>*Plataforma para clínica estética: agendamiento de citas, catálogo de procedimientos, gestión de usuarios y panel de administración, con autenticación Auth0.* | `Next.js` `TypeScript` `React` `Auth0` |
+| [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br>*SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.* | `Node.js` `Express` `MongoDB` |
 
-<sub><a href="https://github.com/Sekkon0906?tab=repositories">See all repositories · Ver todos los repositorios</a></sub>
+<a href="https://github.com/Sekkon0906?tab=repositories">See all repositories · Ver todos los repositorios</a>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -101,25 +101,25 @@ y entregar cosas que la gente realmente usa.</sub>
 
 <div align="center">
 
-**Languages** &nbsp;·&nbsp; <sub>Lenguajes</sub>
+**Languages** &nbsp;·&nbsp; *Lenguajes*
 
 <img src="https://skillicons.dev/icons?i=java,cpp,python,js,ts,php&theme=dark" />
 
 <br><br>
 
-**Frontend** &nbsp;·&nbsp; <sub>Frontend</sub>
+**Frontend** &nbsp;·&nbsp; *Frontend*
 
 <img src="https://skillicons.dev/icons?i=react,angular,nextjs,vue,tailwind,html,css&theme=dark" />
 
 <br><br>
 
-**Backend & Data** &nbsp;·&nbsp; <sub>Backend y datos</sub>
+**Backend & Data** &nbsp;·&nbsp; *Backend y datos*
 
 <img src="https://skillicons.dev/icons?i=nodejs,express,laravel,mysql,postgres,mongodb,firebase&theme=dark" />
 
 <br><br>
 
-**DevOps & Tools** &nbsp;·&nbsp; <sub>DevOps y herramientas</sub>
+**DevOps & Tools** &nbsp;·&nbsp; *DevOps y herramientas*
 
 <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,postman,vercel,idea,androidstudio,vscode,figma&theme=dark" />
 
@@ -133,11 +133,11 @@ y entregar cosas que la gente realmente usa.</sub>
 
 <div align="center">
 
-<img width="96%" alt="GitHub overview / Resumen de GitHub" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
+<img width="100%" alt="GitHub overview / Resumen de GitHub" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
 
 <br><br>
 
-<img width="96%" alt="Language distribution / Distribución por lenguaje" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
+<img width="100%" alt="Language distribution / Distribución por lenguaje" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -149,7 +149,7 @@ y entregar cosas que la gente realmente usa.</sub>
 
 <div align="center">
 
-<img width="96%" alt="Contribution grid / Grilla de contribuciones" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
+<img width="100%" alt="Contribution grid / Grilla de contribuciones" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -163,7 +163,7 @@ y entregar cosas que la gente realmente usa.</sub>
 
 Open to internships, freelance work, and collaboration on products worth building.
 
-<sub>Abierto a prácticas, trabajo freelance y colaboración en productos que valga la pena construir.</sub>
+*Abierto a prácticas, trabajo freelance y colaboración en productos que valga la pena construir.*
 
 <br>
 
