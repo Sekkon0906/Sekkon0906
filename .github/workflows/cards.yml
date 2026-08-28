@@ -2,7 +2,7 @@ name: Generate Profile Cards
 
 on:
   schedule:
-    - cron: "0 3 * * *" # daily, a few hours after the snake
+    - cron: "0 3 * * *" # daily
   workflow_dispatch:
   push:
     branches:
@@ -41,10 +41,14 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- assets; then
+          # Stage first, then compare against the index. A plain `git diff`
+          # ignores untracked files, so on the first run — when every card is
+          # new — it reports no change and the freshly rendered SVGs are
+          # silently thrown away.
+          git add -A assets
+          if git diff --cached --quiet -- assets; then
             echo "Cards unchanged, nothing to commit."
             exit 0
           fi
-          git add assets
           git commit -m "Refresh profile cards"
           git push
