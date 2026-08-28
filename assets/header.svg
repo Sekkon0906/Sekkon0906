@@ -25,9 +25,9 @@
     .mono {
       font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
     }
-    .tagline { font-size: 13px; letter-spacing: 3.4px; fill: #8b8b8b; }
-    .node-label { font-size: 10px; letter-spacing: 2.2px; fill: #6e6e6e; }
-    .tagline-es { font-size: 10.5px; letter-spacing: 2.6px; fill: #5a5a5a; }
+    .tagline { font-size: 20px; letter-spacing: 1.6px; fill: #c8c8c8; }
+    .node-label { font-size: 15px; letter-spacing: 1.4px; fill: #9a9a9a; }
+    .tagline-es { font-size: 15px; letter-spacing: 1.2px; fill: #7d7d7d; }
   </style>
 
   <!-- Panel -->

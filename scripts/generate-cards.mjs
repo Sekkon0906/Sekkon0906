@@ -51,9 +51,9 @@ const doc = (w, h, title, body) =>
 <style>
   .f { font-family: ${FONT}; }
   .m { font-family: ${MONO}; }
-  .label { font-size: 10px; letter-spacing: 1.8px; fill: ${C.muted}; }
-  .value { font-size: 26px; font-weight: 700; fill: ${C.text}; }
-  .head  { font-size: 11px; letter-spacing: 2.6px; fill: ${C.muted}; }
+  .label { font-size: 13px; letter-spacing: 0.8px; fill: ${C.muted}; }
+  .value { font-size: 34px; font-weight: 700; fill: ${C.text}; }
+  .head  { font-size: 14px; letter-spacing: 1.6px; fill: ${C.muted}; }
 </style>
 ${panel(w, h)}
 ${body}
@@ -184,9 +184,9 @@ function contributionsCard(user) {
   const level = (n) => (n === 0 ? 0 : n <= q1 ? 1 : n <= q2 ? 2 : n <= q3 ? 3 : 4);
 
   const CELL = 11, GAP = 3, STEP = CELL + GAP;
-  const X0 = 44, Y0 = 74;
+  const X0 = 52, Y0 = 82;
   const W = X0 + weeks.length * STEP + 18;
-  const H = Y0 + 7 * STEP + 46;
+  const H = Y0 + 7 * STEP + 52;
 
   // Month labels, placed at the first week that opens a new month.
   let lastMonth = -1;
@@ -195,11 +195,11 @@ function contributionsCard(user) {
     const m = d.getUTCMonth();
     if (m === lastMonth || d.getUTCDate() > 7) return '';
     lastMonth = m;
-    return `<text class="f" x="${X0 + i * STEP}" y="${Y0 - 10}" font-size="9.5" fill="${C.dim}">${MONTHS[m]}</text>`;
+    return `<text class="f" x="${X0 + i * STEP}" y="${Y0 - 12}" font-size="12" fill="${C.dim}">${MONTHS[m]}</text>`;
   }).join('');
 
   const dayLabels = [[1, 'Mon'], [3, 'Wed'], [5, 'Fri']]
-    .map(([d, t]) => `<text class="f" x="${X0 - 10}" y="${Y0 + d * STEP + 9}" font-size="9" fill="${C.dim}" text-anchor="end">${t}</text>`)
+    .map(([d, t]) => `<text class="f" x="${X0 - 10}" y="${Y0 + d * STEP + 10}" font-size="12" fill="${C.dim}" text-anchor="end">${t}</text>`)
     .join('');
 
   // One fade-in per week rather than per cell: 53 animations instead of 371.
@@ -213,13 +213,13 @@ function contributionsCard(user) {
 
   const legendX = W - 18 - 5 * STEP - 116;
   const legend = `
-  <text class="f" x="${legendX}" y="${H - 18}" font-size="9" fill="${C.dim}" text-anchor="end">Less / Menos</text>
+  <text class="f" x="${legendX}" y="${H - 17}" font-size="12" fill="${C.dim}" text-anchor="end">Less / Menos</text>
   ${C.ramp.map((c, i) => `<rect x="${legendX + 8 + i * STEP}" y="${H - 27}" width="${CELL}" height="${CELL}" rx="2.5" fill="${c}"/>`).join('')}
-  <text class="f" x="${legendX + 16 + 5 * STEP}" y="${H - 18}" font-size="9" fill="${C.dim}">More / Más</text>`;
+  <text class="f" x="${legendX + 16 + 5 * STEP}" y="${H - 17}" font-size="12" fill="${C.dim}">More / Más</text>`;
 
   const body = `
   <text class="f head" x="24" y="34">CONTRIBUTIONS · LAST YEAR<tspan fill="${C.dim}">  /  CONTRIBUCIONES · ÚLTIMO AÑO</tspan></text>
-  <text class="m" x="${W - 24}" y="36" font-size="20" font-weight="700" fill="${C.red}" text-anchor="end">${fmt(total)}</text>
+  <text class="m" x="${W - 24}" y="36" font-size="26" font-weight="700" fill="${C.red}" text-anchor="end">${fmt(total)}</text>
   <line x1="24" y1="50" x2="${W - 24}" y2="50" stroke="${C.border}"/>
   ${months}${dayLabels}${grid}${legend}`;
 
@@ -239,7 +239,7 @@ function statsCard(user) {
     [['Followers', 'Seguidores'], user.followers.totalCount, false],
   ];
 
-  const W = 820, H = 150;
+  const W = 820, H = 170;
   const colW = (W - 48) / tiles.length;
 
   const body = `
@@ -248,11 +248,11 @@ function statsCard(user) {
   ${tiles.map(([[en, es], value, accent], i) => {
     const cx = 24 + colW * i + colW / 2;
     return `<g opacity="0">
-      <text class="f value" x="${cx}" y="90" text-anchor="middle" fill="${accent ? C.red : C.text}">${fmt(value)}</text>
-      <text class="f label" x="${cx}" y="110" text-anchor="middle">${esc(en.toUpperCase())}</text>
-      <text class="f label" x="${cx}" y="126" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
+      <text class="f value" x="${cx}" y="98" text-anchor="middle" fill="${accent ? C.red : C.text}">${fmt(value)}</text>
+      <text class="f label" x="${cx}" y="124" text-anchor="middle">${esc(en.toUpperCase())}</text>
+      <text class="f label" x="${cx}" y="144" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
       <animate attributeName="opacity" from="0" to="1" begin="${(0.08 * i).toFixed(2)}s" dur="0.5s" fill="freeze"/>
-    </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="62" x2="${24 + colW * (i + 1)}" y2="130" stroke="${C.border}"/>` : ''}`;
+    </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="66" x2="${24 + colW * (i + 1)}" y2="150" stroke="${C.border}"/>` : ''}`;
   }).join('')}`;
 
   return { name: 'stats.svg', svg: doc(W, H, 'GitHub overview / Resumen de GitHub', body) };
@@ -273,8 +273,8 @@ function languagesCard(user) {
   // Red for the dominant language, then a descending grey ramp.
   const shades = [C.red, '#ffffff', '#b3b3b3', '#8a8a8a', '#5f5f5f', '#3d3d3d'];
 
-  const W = 820, H = 150;
-  const barX = 24, barW = W - 48, barY = 62, barH = 14;
+  const W = 820, H = 168;
+  const barX = 24, barW = W - 48, barY = 66, barH = 16;
 
   let x = barX;
   const segments = top.map(([name, size], i) => {
@@ -288,11 +288,11 @@ function languagesCard(user) {
 
   const legend = top.map(([name, size], i) => {
     const col = i % 3, row = Math.floor(i / 3);
-    const lx = barX + col * (barW / 3), ly = 108 + row * 22;
+    const lx = barX + col * (barW / 3), ly = 112 + row * 26;
     return `<g>
-      <rect x="${lx}" y="${ly - 9}" width="9" height="9" rx="2" fill="${shades[i]}"/>
-      <text class="f" x="${lx + 16}" y="${ly}" font-size="11.5" fill="${C.text}">${esc(name)}</text>
-      <text class="f" x="${lx + 16 + name.length * 7 + 8}" y="${ly}" font-size="11" fill="${C.dim}">${((size / sum) * 100).toFixed(1)}%</text>
+      <rect x="${lx}" y="${ly - 11}" width="11" height="11" rx="2" fill="${shades[i]}"/>
+      <text class="f" x="${lx + 18}" y="${ly}" font-size="14" fill="${C.text}">${esc(name)}</text>
+      <text class="f" x="${lx + 18 + name.length * 8.5 + 8}" y="${ly}" font-size="13" fill="${C.dim}">${((size / sum) * 100).toFixed(1)}%</text>
     </g>`;
   }).join('');
 
