@@ -42,23 +42,6 @@ const esc = (s) =>
 
 const fmt = (n) => (n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n));
 
-/** Greedy word wrap by approximate character width. */
-function wrap(text, maxChars, maxLines) {
-  const words = String(text || '').split(/\s+/).filter(Boolean);
-  const lines = [];
-  let line = '';
-  for (const w of words) {
-    if (!line) line = w;
-    else if ((line + ' ' + w).length <= maxChars) line += ' ' + w;
-    else { lines.push(line); line = w; if (lines.length === maxLines) break; }
-  }
-  if (line && lines.length < maxLines) lines.push(line);
-  if (lines.length === maxLines && words.join(' ').length > lines.join(' ').length) {
-    lines[maxLines - 1] = lines[maxLines - 1].replace(/[.,;:]?$/, '') + '…';
-  }
-  return lines;
-}
-
 const panel = (w, h) =>
   `<rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="12" fill="${C.bg}" stroke="${C.border}"/>`;
 
@@ -98,10 +81,7 @@ query($login: String!) {
       totalCount
       nodes {
         name
-        description
         stargazerCount
-        forkCount
-        primaryLanguage { name }
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name } }
         }
@@ -150,9 +130,8 @@ function mockData() {
     }
     weeks.push({ contributionDays: days });
   }
-  const mk = (name, description, stars, lang, size) => ({
-    name, description, stargazerCount: stars, forkCount: 0,
-    primaryLanguage: { name: lang },
+  const mk = (name, stars, lang, size) => ({
+    name, stargazerCount: stars,
     languages: { edges: [{ size, node: { name: lang } }] },
   });
   return {
@@ -171,12 +150,12 @@ function mockData() {
     repositories: {
       totalCount: 17,
       nodes: [
-        mk('GestorEventosMarcaBlanca', 'GESTEK Event OS — white-label SaaS with an AI agent that executes real actions.', 0, 'JavaScript', 900000),
-        mk('wallnut', 'Gamified university wallet built on the Ardys points system.', 1, 'JavaScript', 500000),
-        mk('consultorioEstetico-vm', 'Next.js clinic platform with Auth0, scheduling and an admin panel.', 1, 'TypeScript', 400000),
-        mk('Coffee-management', 'CoffeeOps — inventory, batch traceability and analytics for coffee producers.', 0, 'JavaScript', 300000),
-        mk('Ardy-IA', 'AI language learning through conversation, voice and images.', 0, 'Python', 200000),
-        mk('pielCanelaStore', 'Boutique inventory on Clean Architecture with Node, Mongo and Vue 3.', 0, 'JavaScript', 150000),
+        mk('GestorEventosMarcaBlanca', 0, 'JavaScript', 900000),
+        mk('wallnut', 1, 'JavaScript', 500000),
+        mk('consultorioEstetico-vm', 1, 'TypeScript', 400000),
+        mk('Coffee-management', 0, 'JavaScript', 300000),
+        mk('Ardy-IA', 0, 'Python', 200000),
+        mk('pielCanelaStore', 0, 'JavaScript', 150000),
       ],
     },
   };
@@ -232,19 +211,19 @@ function contributionsCard(user) {
     return `<g opacity="0">${cells}<animate attributeName="opacity" from="0" to="1" begin="${(i * 0.018).toFixed(3)}s" dur="0.45s" fill="freeze"/></g>`;
   }).join('');
 
-  const legendX = W - 18 - 5 * STEP - 78;
+  const legendX = W - 18 - 5 * STEP - 116;
   const legend = `
-  <text class="f" x="${legendX}" y="${H - 18}" font-size="9" fill="${C.dim}" text-anchor="end">Less</text>
+  <text class="f" x="${legendX}" y="${H - 18}" font-size="9" fill="${C.dim}" text-anchor="end">Less / Menos</text>
   ${C.ramp.map((c, i) => `<rect x="${legendX + 8 + i * STEP}" y="${H - 27}" width="${CELL}" height="${CELL}" rx="2.5" fill="${c}"/>`).join('')}
-  <text class="f" x="${legendX + 16 + 5 * STEP}" y="${H - 18}" font-size="9" fill="${C.dim}">More</text>`;
+  <text class="f" x="${legendX + 16 + 5 * STEP}" y="${H - 18}" font-size="9" fill="${C.dim}">More / Más</text>`;
 
   const body = `
-  <text class="f head" x="24" y="34">CONTRIBUTIONS · LAST YEAR</text>
+  <text class="f head" x="24" y="34">CONTRIBUTIONS · LAST YEAR<tspan fill="${C.dim}">  /  CONTRIBUCIONES · ÚLTIMO AÑO</tspan></text>
   <text class="m" x="${W - 24}" y="36" font-size="20" font-weight="700" fill="${C.red}" text-anchor="end">${fmt(total)}</text>
   <line x1="24" y1="50" x2="${W - 24}" y2="50" stroke="${C.border}"/>
   ${months}${dayLabels}${grid}${legend}`;
 
-  return { name: 'contributions.svg', svg: doc(W, H, `${total} contributions in the last year`, body) };
+  return { name: 'contributions.svg', svg: doc(W, H, `${total} contributions in the last year / contribuciones en el último año`, body) };
 }
 
 /** Headline numbers. */
@@ -252,30 +231,31 @@ function statsCard(user) {
   const c = user.contributionsCollection;
   const stars = user.repositories.nodes.reduce((a, r) => a + r.stargazerCount, 0);
   const tiles = [
-    ['Contributions', c.contributionCalendar.totalContributions, true],
-    ['Commits', c.totalCommitContributions, false],
-    ['Pull requests', c.totalPullRequestContributions, false],
-    ['Repositories', user.repositories.totalCount, false],
-    ['Stars earned', stars, false],
-    ['Followers', user.followers.totalCount, false],
+    [['Contributions', 'Contribuciones'], c.contributionCalendar.totalContributions, true],
+    [['Commits', 'Commits'], c.totalCommitContributions, false],
+    [['Pull requests', 'Pull requests'], c.totalPullRequestContributions, false],
+    [['Repositories', 'Repositorios'], user.repositories.totalCount, false],
+    [['Stars earned', 'Estrellas'], stars, false],
+    [['Followers', 'Seguidores'], user.followers.totalCount, false],
   ];
 
-  const W = 820, H = 132;
+  const W = 820, H = 150;
   const colW = (W - 48) / tiles.length;
 
   const body = `
-  <text class="f head" x="24" y="32">OVERVIEW</text>
+  <text class="f head" x="24" y="32">OVERVIEW<tspan fill="${C.dim}">  /  RESUMEN</tspan></text>
   <line x1="24" y1="46" x2="${W - 24}" y2="46" stroke="${C.border}"/>
-  ${tiles.map(([label, value, accent], i) => {
+  ${tiles.map(([[en, es], value, accent], i) => {
     const cx = 24 + colW * i + colW / 2;
     return `<g opacity="0">
       <text class="f value" x="${cx}" y="90" text-anchor="middle" fill="${accent ? C.red : C.text}">${fmt(value)}</text>
-      <text class="f label" x="${cx}" y="110" text-anchor="middle">${esc(label.toUpperCase())}</text>
+      <text class="f label" x="${cx}" y="110" text-anchor="middle">${esc(en.toUpperCase())}</text>
+      <text class="f label" x="${cx}" y="126" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
       <animate attributeName="opacity" from="0" to="1" begin="${(0.08 * i).toFixed(2)}s" dur="0.5s" fill="freeze"/>
-    </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="62" x2="${24 + colW * (i + 1)}" y2="112" stroke="${C.border}"/>` : ''}`;
+    </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="62" x2="${24 + colW * (i + 1)}" y2="130" stroke="${C.border}"/>` : ''}`;
   }).join('')}`;
 
-  return { name: 'stats.svg', svg: doc(W, H, 'GitHub overview', body) };
+  return { name: 'stats.svg', svg: doc(W, H, 'GitHub overview / Resumen de GitHub', body) };
 }
 
 /** Language split across owned, non-fork repositories. */
@@ -317,55 +297,13 @@ function languagesCard(user) {
   }).join('');
 
   const body = `
-  <text class="f head" x="24" y="32">LANGUAGE DISTRIBUTION</text>
+  <text class="f head" x="24" y="32">LANGUAGE DISTRIBUTION<tspan fill="${C.dim}">  /  DISTRIBUCIÓN POR LENGUAJE</tspan></text>
   <line x1="24" y1="46" x2="${W - 24}" y2="46" stroke="${C.border}"/>
   <g opacity="0">${segments}${rest}<animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
   ${legend}`;
 
-  return { name: 'languages.svg', svg: doc(W, H, 'Language distribution', body) };
+  return { name: 'languages.svg', svg: doc(W, H, 'Language distribution / Distribución por lenguaje', body) };
 }
-
-const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
-
-/** One card per featured repository, so each stays individually clickable. */
-function repoCard(repo, { title, blurb }) {
-  const W = 420, H = 158;
-  const lines = wrap(blurb || repo.description || '', 52, 3);
-  const lang = repo.primaryLanguage?.name || '—';
-
-  const body = `
-  <text class="f" x="22" y="38" font-size="15" font-weight="700" fill="${C.text}">${esc(title || repo.name)}</text>
-  <rect x="22" y="48" width="26" height="2" fill="${C.red}"/>
-  ${lines.map((l, i) => `<text class="f" x="22" y="${74 + i * 17}" font-size="11.5" fill="${C.muted}">${esc(l)}</text>`).join('')}
-  <line x1="22" y1="${H - 38}" x2="${W - 22}" y2="${H - 38}" stroke="${C.border}"/>
-  <circle cx="27" cy="${H - 21}" r="4.5" fill="${C.red}"/>
-  <text class="f" x="38" y="${H - 17}" font-size="11" fill="${C.text}">${esc(lang)}</text>
-  <text class="f" x="${W - 22}" y="${H - 17}" font-size="11" fill="${C.dim}" text-anchor="end">${plural(repo.stargazerCount, 'star')} · ${plural(repo.forkCount, 'fork')}</text>`;
-
-  return { name: `repo-${repo.name}.svg`, svg: doc(W, H, `${title || repo.name} — ${lang}`, body) };
-}
-
-/* Titles and blurbs live here rather than coming from the repo metadata:
-   the GitHub descriptions are in Spanish and longer than a card can hold,
-   and the repo slugs are not the names these products go by. */
-const FEATURED = {
-  GestorEventosMarcaBlanca: {
-    title: 'GESTEK — Event OS',
-    blurb: 'White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, payments, roles, API and webhooks.',
-  },
-  wallnut: {
-    title: 'Walnut — University Wallet',
-    blurb: 'Gamified university wallet. The Ardys points system drives event participation and rewards across students, faculty and admins.',
-  },
-  'consultorioEstetico-vm': {
-    title: 'Consultorio Estético',
-    blurb: 'Aesthetic clinic platform: scheduling, procedure catalog, user management and an admin panel, secured with Auth0.',
-  },
-  'Coffee-management': {
-    title: 'CoffeeOps — Management',
-    blurb: 'Centralised inventory, batch traceability, suppliers and real-time analytics for coffee shops and producers.',
-  },
-};
 
 /* ── Main ───────────────────────────────────────────────────────────── */
 
@@ -373,16 +311,6 @@ async function main() {
   const user = MOCK ? mockData() : await fetchData();
 
   const cards = [contributionsCard(user), statsCard(user), languagesCard(user)];
-
-  const byName = new Map(user.repositories.nodes.map((r) => [r.name, r]));
-  for (const [name, meta] of Object.entries(FEATURED)) {
-    const repo = byName.get(name);
-    if (!repo) {
-      console.warn(`! featured repo not found, skipping card: ${name}`);
-      continue;
-    }
-    cards.push(repoCard(repo, meta));
-  }
 
   await mkdir(OUT, { recursive: true });
   for (const { name, svg } of cards) {
