@@ -8,7 +8,7 @@
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=19&duration=3500&pause=1200&color=FFFFFF&center=true&vCenter=true&multiline=true&repeat=true&random=false&width=620&height=60&lines=Building+full-stack+systems+that+solve+real+problems;Clean+architecture+%C2%B7+Scalable+backends+%C2%B7+Sharp+interfaces" />
+<img width="88%" alt="Clean architecture, scalable backends, sharp interfaces" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/header.svg" />
 
 <br><br>
 
@@ -18,8 +18,8 @@
 <a href="https://www.linkedin.com/in/juan-medina-40b3ba269">
 <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=000000" />
 </a>
-<a href="mailto:Juan.Medina@estudiantesunibague.edu.co">
-<img src="https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" />
+<a href="mailto:juan.medina@hytrex.co">
+<img src="https://img.shields.io/badge/Email-000000?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=000000" />
 </a>
 <a href="https://instagram.com/felipe_medina_9">
 <img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=instagram&logoColor=white&labelColor=000000" />
@@ -262,8 +262,12 @@ Open to internships, freelance work, and collaboration on products worth buildin
 
 <br>
 
+<a href="mailto:juan.medina@hytrex.co">
+<img src="https://img.shields.io/badge/juan.medina@hytrex.co-000000?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=000000" />
+</a>
+<br>
 <a href="mailto:Juan.Medina@estudiantesunibague.edu.co">
-<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-000000?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" />
+<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-0d1117?style=flat-square&logo=maildotru&logoColor=8b8b8b&labelColor=0d1117&color=0d1117" />
 </a>
 <br>
 <a href="https://www.linkedin.com/in/juan-medina-40b3ba269">
