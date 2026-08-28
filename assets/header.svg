@@ -12,7 +12,7 @@
     <!-- Hairline rule that fades out towards both ends -->
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#ffffff" stop-opacity="0" />
-      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.28" />
+      <stop offset="50%"  stop-color="#e10600" stop-opacity="0.85" />
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
     </linearGradient>
 
@@ -30,7 +30,7 @@
   </style>
 
   <!-- Panel -->
-  <rect x="1" y="1" width="898" height="150" rx="12" fill="#0d1117" stroke="#242424" stroke-width="1" />
+  <rect x="1" y="1" width="898" height="150" rx="12" fill="#0b0b0b" stroke="#232323" stroke-width="1" />
 
   <g clip-path="url(#panel)">
     <!-- Slow ambient sweep -->
@@ -54,16 +54,16 @@
 
     <!-- Travelling pulse: a short dash sliding along the track -->
     <line x1="110" y1="105" x2="790" y2="105"
-          stroke="#ffffff" stroke-width="2" stroke-linecap="round"
-          stroke-dasharray="64 680" stroke-opacity="0.9">
+          stroke="#e10600" stroke-width="2.5" stroke-linecap="round"
+          stroke-dasharray="64 680" stroke-opacity="1">
       <animate attributeName="stroke-dashoffset" from="64" to="-680" dur="4.5s" repeatCount="indefinite" />
     </line>
 
     <!-- CLIENT -->
     <g>
-      <circle cx="110" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
-        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
+      <circle cx="110" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+        <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.02;0.06;0.15;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
       <text class="mono node-label" x="110" y="136" text-anchor="middle">CLIENT
@@ -73,9 +73,9 @@
 
     <!-- API -->
     <g>
-      <circle cx="336" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
-        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
+      <circle cx="336" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+        <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.29;0.33;0.42;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
       <text class="mono node-label" x="336" y="136" text-anchor="middle">API
@@ -85,9 +85,9 @@
 
     <!-- SERVICE -->
     <g>
-      <circle cx="562" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
-        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
+      <circle cx="562" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+        <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.58;0.62;0.71;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
       <text class="mono node-label" x="562" y="136" text-anchor="middle">SERVICE
@@ -97,9 +97,9 @@
 
     <!-- DATA -->
     <g>
-      <circle cx="790" cy="105" r="6.5" fill="#0d1117" stroke="#4a4a4a" stroke-width="2">
-        <animate attributeName="fill"   values="#0d1117;#0d1117;#ffffff;#0d1117;#0d1117" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
-        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#ffffff;#4a4a4a;#4a4a4a" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
+      <circle cx="790" cy="105" r="6.5" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2">
+        <animate attributeName="fill"   values="#0b0b0b;#0b0b0b;#e10600;#0b0b0b;#0b0b0b" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="stroke" values="#4a4a4a;#4a4a4a;#e10600;#4a4a4a;#4a4a4a" keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
         <animate attributeName="r"      values="6.5;6.5;9;6.5;6.5"                       keyTimes="0;0.87;0.91;0.99;1" dur="4.5s" repeatCount="indefinite" />
       </circle>
       <text class="mono node-label" x="790" y="136" text-anchor="middle">DATA
