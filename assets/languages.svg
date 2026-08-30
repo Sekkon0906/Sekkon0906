@@ -11,30 +11,30 @@
 
   <text class="f head" x="24" y="32">LANGUAGE DISTRIBUTION<tspan fill="#4a4a4a">  /  DISTRIBUCIÓN POR LENGUAJE</tspan></text>
   <line x1="24" y1="46" x2="796" y2="46" stroke="#232323"/>
-  <g opacity="0"><rect x="24" y="66" width="434.11407903334106" height="16" fill="#e10600"><title>JavaScript 56.2%</title></rect><rect x="458.11407903334106" y="66" width="202.79796858302834" height="16" fill="#ffffff"><title>TypeScript 26.3%</title></rect><rect x="660.9120476163694" y="66" width="54.6358732294711" height="16" fill="#b3b3b3"><title>HTML 7.1%</title></rect><rect x="715.5479208458405" y="66" width="30.301028276385473" height="16" fill="#8a8a8a"><title>PLpgSQL 3.9%</title></rect><rect x="745.848949122226" y="66" width="25.153386007414365" height="16" fill="#5f5f5f"><title>CSS 3.3%</title></rect><rect x="771.0023351296404" y="66" width="15.367344430580406" height="16" fill="#3d3d3d"><title>Python 2.0%</title></rect><rect x="786.3696795602208" y="66" width="9.630320439779211" height="16" fill="#1e1e1e"/><animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
+  <g opacity="0"><rect x="24" y="66" width="434.73579368016937" height="16" fill="#e10600"><title>JavaScript 56.3%</title></rect><rect x="458.73579368016937" y="66" width="198.17278519082947" height="16" fill="#ffffff"><title>TypeScript 25.7%</title></rect><rect x="656.9085788709988" y="66" width="54.644349142126465" height="16" fill="#b3b3b3"><title>HTML 7.1%</title></rect><rect x="711.5529280131252" y="66" width="30.409567987830012" height="16" fill="#8a8a8a"><title>CSS 3.9%</title></rect><rect x="741.9624960009552" y="66" width="29.609957188594436" height="16" fill="#5f5f5f"><title>PLpgSQL 3.8%</title></rect><rect x="771.5724531895496" y="66" width="15.016863670150997" height="16" fill="#3d3d3d"><title>Python 1.9%</title></rect><rect x="786.5893168597006" y="66" width="9.410683140299398" height="16" fill="#1e1e1e"/><animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
   <g>
       <rect x="24" y="101" width="11" height="11" rx="2" fill="#e10600"/>
       <text class="f" x="42" y="112" font-size="14" fill="#ffffff">JavaScript</text>
-      <text class="f" x="135" y="112" font-size="13" fill="#4a4a4a">56.2%</text>
+      <text class="f" x="135" y="112" font-size="13" fill="#4a4a4a">56.3%</text>
     </g><g>
       <rect x="281.3333333333333" y="101" width="11" height="11" rx="2" fill="#ffffff"/>
       <text class="f" x="299.3333333333333" y="112" font-size="14" fill="#ffffff">TypeScript</text>
-      <text class="f" x="392.3333333333333" y="112" font-size="13" fill="#4a4a4a">26.3%</text>
+      <text class="f" x="392.3333333333333" y="112" font-size="13" fill="#4a4a4a">25.7%</text>
     </g><g>
       <rect x="538.6666666666666" y="101" width="11" height="11" rx="2" fill="#b3b3b3"/>
       <text class="f" x="556.6666666666666" y="112" font-size="14" fill="#ffffff">HTML</text>
       <text class="f" x="598.6666666666666" y="112" font-size="13" fill="#4a4a4a">7.1%</text>
     </g><g>
       <rect x="24" y="127" width="11" height="11" rx="2" fill="#8a8a8a"/>
-      <text class="f" x="42" y="138" font-size="14" fill="#ffffff">PLpgSQL</text>
-      <text class="f" x="109.5" y="138" font-size="13" fill="#4a4a4a">3.9%</text>
+      <text class="f" x="42" y="138" font-size="14" fill="#ffffff">CSS</text>
+      <text class="f" x="75.5" y="138" font-size="13" fill="#4a4a4a">3.9%</text>
     </g><g>
       <rect x="281.3333333333333" y="127" width="11" height="11" rx="2" fill="#5f5f5f"/>
-      <text class="f" x="299.3333333333333" y="138" font-size="14" fill="#ffffff">CSS</text>
-      <text class="f" x="332.8333333333333" y="138" font-size="13" fill="#4a4a4a">3.3%</text>
+      <text class="f" x="299.3333333333333" y="138" font-size="14" fill="#ffffff">PLpgSQL</text>
+      <text class="f" x="366.8333333333333" y="138" font-size="13" fill="#4a4a4a">3.8%</text>
     </g><g>
       <rect x="538.6666666666666" y="127" width="11" height="11" rx="2" fill="#3d3d3d"/>
       <text class="f" x="556.6666666666666" y="138" font-size="14" fill="#ffffff">Python</text>
-      <text class="f" x="615.6666666666666" y="138" font-size="13" fill="#4a4a4a">2.0%</text>
+      <text class="f" x="615.6666666666666" y="138" font-size="13" fill="#4a4a4a">1.9%</text>
     </g>
 </svg>
