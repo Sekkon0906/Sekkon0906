@@ -85,8 +85,8 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 |:--|:--|:--:|
 | **GESTEK — Event OS** | Gestbot agent actions, white-label rollout<br>*Acciones del agente Gestbot, despliegue marca blanca* | `Active · Activo` |
 | **Consultorio Estético** | Migrating modules to the new Next.js structure<br>*Migrando módulos a la nueva estructura Next.js* | `In migration · En migración` |
-| **Walnut / Ardys** &nbsp;·&nbsp; BBMC S.S.A | Points engine and rewards flow built, on hold<br>*Motor de puntos y flujo de recompensas listos, en pausa* | `Paused · En pausa` |
-| **CoffeeOps** | Inventory and batch tracking shipped, on hold<br>*Inventario y trazabilidad de lotes entregados, en pausa* | `Paused · En pausa` |
+| **Walnut / Ardys** &nbsp;·&nbsp; BBMC S.S.A | Points engine and rewards flow built. Development paused, open to offers<br>*Motor de puntos y flujo de recompensas listos. Desarrollo en pausa, abierto a ofertas* | `Open to offers`<br>`Abierto a ofertas` |
+| **CoffeeOps** | Inventory and batch tracking shipped. Development paused, open to offers<br>*Inventario y trazabilidad de lotes entregados. Desarrollo en pausa, abierto a ofertas* | `Open to offers`<br>`Abierto a ofertas` |
 
 </div>
 
@@ -103,9 +103,9 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 | Project · Proyecto | What it is · Qué es | Stack |
 |:--|:--|:--|
 | [**GESTEK — Event OS**](https://github.com/Sekkon0906/GestorEventosMarcaBlanca) | White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, MercadoPago payments, role-based teams, agenda, API and webhooks.<br>*SaaS de eventos marca blanca con Gestbot, un agente de IA que ejecuta acciones reales. Boletería con QR, pagos MercadoPago, equipos con roles, agenda, API y webhooks.* | `Node.js` `Express` `MongoDB` |
-| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | Built at **[BBMC S.S.A](https://github.com/BBMC-S-S-A)**. Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br>*Desarrollado en **BBMC S.S.A**. Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.* | `React` `Node.js` `PostgreSQL` `Docker` |
+| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | **Open to acquisition or continued development.** Built at **[BBMC S.S.A](https://github.com/BBMC-S-S-A)**, where the main repository is private; full source shared under agreement. Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br>**Abierto a venta o a continuar el desarrollo.** Desarrollado en **BBMC S.S.A**, donde el repositorio principal es privado; código completo bajo acuerdo. Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.* | `React` `Node.js` `PostgreSQL` `Docker` |
 | [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, secured with Auth0.<br>*Plataforma para clínica estética: agendamiento de citas, catálogo de procedimientos, gestión de usuarios y panel de administración, con autenticación Auth0.* | `Next.js` `TypeScript` `React` `Auth0` |
-| [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br>*SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.* | `Node.js` `Express` `MongoDB` |
+| [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | **Open to acquisition or continued development.** SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br>**Abierto a venta o a continuar el desarrollo.** SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.* | `Node.js` `Express` `MongoDB` |
 
 <a href="https://github.com/Sekkon0906?tab=repositories">See all repositories · Ver todos los repositorios</a>
 
