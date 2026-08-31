@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" alt="Hytrex — Clarity. Purpose. Impact. Founder & CEO, Juan Felipe Medina" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/banner.svg" />
+<img width="100%" alt="Hytrex — Clarity. Purpose. Impact. Co-founder & CEO, Juan Felipe Medina" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/banner.svg" />
 
 # Juan Felipe Medina
 
@@ -85,12 +85,12 @@ y entregar cosas que la gente realmente usa.*
 
 ## Hytrex &nbsp;/&nbsp; Mi startup
 
-**Founder & CEO.** Hytrex is a digital engineering studio I founded in Colombia. We turn ideas and
+**Co-founder & CEO.** Hytrex is a digital engineering studio I co-founded in Colombia. We turn ideas and
 business problems into high-impact technology, combining strategy, design, engineering and delivery
 into products that move a business rather than just demo well. Most of the work below runs on the
 same principles the studio is built on: clarity, purpose, impact.
 
-*Fundador y CEO. Hytrex es un estudio de ingeniería digital que fundé en Colombia. Convertimos ideas
+*Cofundador y CEO. Hytrex es un estudio de ingeniería digital que cofundé en Colombia. Convertimos ideas
 y problemas de negocio en tecnología de alto impacto, combinando estrategia, diseño, ingeniería y
 ejecución en productos que mueven el negocio y no solo lucen bien en un demo. Buena parte del trabajo
 de abajo corre sobre los mismos principios del estudio: claridad, propósito, impacto.*

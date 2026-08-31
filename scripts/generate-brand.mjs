@@ -254,7 +254,7 @@ ${chips}
 `;
 }
 
-const bannerSvg = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" role="img" aria-label="Hytrex — Clarity. Purpose. Impact. Founder and CEO, Juan Felipe Medina">
+const bannerSvg = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" role="img" aria-label="Hytrex — Clarity. Purpose. Impact. Co-founder and CEO, Juan Felipe Medina">
 <title>Hytrex · Clarity. Purpose. Impact.</title>
 
 <defs>
@@ -304,7 +304,7 @@ ${mark({ cx: 196, cy: 115, R: 72 })}
 
   <text class="sans tagline" x="572" y="164" text-anchor="middle">CLARITY<tspan class="dot">.</tspan> PURPOSE<tspan class="dot">.</tspan> IMPACT<tspan class="dot">.</tspan></text>
 
-  <text class="sans kicker" x="570" y="193" text-anchor="middle">FOUNDER &amp; CEO &#183; JUAN FELIPE MEDINA</text>
+  <text class="sans kicker" x="570" y="193" text-anchor="middle">CO-FOUNDER &amp; CEO &#183; JUAN FELIPE MEDINA</text>
 </g>
 
 <rect x="0.5" y="0.5" width="899" height="229" rx="14" fill="none" stroke="#242424"/>
