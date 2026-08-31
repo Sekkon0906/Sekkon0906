@@ -11,11 +11,11 @@
 
   <text class="f head" x="24" y="32">LANGUAGE DISTRIBUTION<tspan fill="#4a4a4a">  /  DISTRIBUCIÓN POR LENGUAJE</tspan></text>
   <line x1="24" y1="46" x2="796" y2="46" stroke="#232323"/>
-  <g opacity="0"><rect x="24" y="66" width="442.5778939105733" height="16" fill="#e10600"><title>JavaScript 57.3%</title></rect><rect x="466.5778939105733" y="66" width="193.30350370702766" height="16" fill="#ffffff"><title>TypeScript 25.0%</title></rect><rect x="659.881397617601" y="66" width="54.06785693957432" height="16" fill="#b3b3b3"><title>HTML 7.0%</title></rect><rect x="713.9492545571753" y="66" width="29.340990949848898" height="16" fill="#8a8a8a"><title>CSS 3.8%</title></rect><rect x="743.2902455070242" y="66" width="28.882414220796157" height="16" fill="#5f5f5f"><title>PLpgSQL 3.7%</title></rect><rect x="772.1726597278204" y="66" width="14.647885981597895" height="16" fill="#3d3d3d"><title>Python 1.9%</title></rect><rect x="786.8205457094183" y="66" width="9.179454290581702" height="16" fill="#1e1e1e"/><animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
+  <g opacity="0"><rect x="24" y="66" width="442.89014132003393" height="16" fill="#e10600"><title>JavaScript 57.4%</title></rect><rect x="466.89014132003393" y="66" width="193.12027824293028" height="16" fill="#ffffff"><title>TypeScript 25.0%</title></rect><rect x="660.0104195629642" y="66" width="54.016607955512875" height="16" fill="#b3b3b3"><title>HTML 7.0%</title></rect><rect x="714.0270275184771" y="66" width="29.31317967596733" height="16" fill="#8a8a8a"><title>CSS 3.8%</title></rect><rect x="743.3402071944445" y="66" width="28.85503761536287" height="16" fill="#5f5f5f"><title>PLpgSQL 3.7%</title></rect><rect x="772.1952448098074" y="66" width="14.634001775385617" height="16" fill="#3d3d3d"><title>Python 1.9%</title></rect><rect x="786.829246585193" y="66" width="9.170753414806995" height="16" fill="#1e1e1e"/><animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
   <g>
       <rect x="24" y="101" width="11" height="11" rx="2" fill="#e10600"/>
       <text class="f" x="42" y="112" font-size="14" fill="#ffffff">JavaScript</text>
-      <text class="f" x="135" y="112" font-size="13" fill="#4a4a4a">57.3%</text>
+      <text class="f" x="135" y="112" font-size="13" fill="#4a4a4a">57.4%</text>
     </g><g>
       <rect x="281.3333333333333" y="101" width="11" height="11" rx="2" fill="#ffffff"/>
       <text class="f" x="299.3333333333333" y="112" font-size="14" fill="#ffffff">TypeScript</text>
