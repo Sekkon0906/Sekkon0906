@@ -59,6 +59,30 @@ y entregar cosas que la gente realmente usa.*
 
 <br>
 
+## GitHub Analytics &nbsp;/&nbsp; Estadísticas
+
+<div align="center">
+
+<img width="100%" alt="Contribution grid / Grilla de contribuciones" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
+
+<br><br>
+
+<img width="100%" alt="GitHub overview / Resumen de GitHub" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
+
+<br><br>
+
+<img width="100%" alt="Commit streaks / Rachas de commits" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/streak.svg" />
+
+<br><br>
+
+<img width="100%" alt="Language distribution / Distribución por lenguaje" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
+
+</div>
+
+<br>
+
 ## Hytrex &nbsp;/&nbsp; Mi startup
 
 **Founder & CEO.** Hytrex is a digital engineering studio I founded in Colombia. We turn ideas and
@@ -165,38 +189,6 @@ locales con Ollama.*
 <div align="center">
 
 <img width="100%" alt="AI and automation tooling: Claude, Claude Code, Cursor, Copilot, Codex, Ollama, MCP, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
-
-</div>
-
-<br>
-
-## GitHub Analytics &nbsp;/&nbsp; Estadísticas
-
-<div align="center">
-
-<img width="100%" alt="GitHub overview / Resumen de GitHub" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
-
-<br><br>
-
-<img width="100%" alt="Commit streaks / Rachas de commits" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/streak.svg" />
-
-<br><br>
-
-<img width="100%" alt="Language distribution / Distribución por lenguaje" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
-
-</div>
-
-<br>
-
-## Contributions &nbsp;/&nbsp; Contribuciones
-
-<div align="center">
-
-<img width="100%" alt="Contribution grid / Grilla de contribuciones" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/contributions.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
