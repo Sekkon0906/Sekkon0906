@@ -9,7 +9,8 @@
  * strokes rather than as clean geometry. A seeded PRNG keeps the output
  * byte-identical between runs, so re-running never churns the diff.
  *
- * Outputs assets/hytrex-mark.svg (mark alone) and assets/banner.svg.
+ * Outputs assets/hytrex-mark.svg (mark alone), assets/banner.svg and
+ * assets/ai-stack.svg.
  */
 
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -34,6 +35,9 @@ function rng(seed) {
 }
 
 const n = (v) => Number(v.toFixed(2));
+
+const esc = (v) =>
+  String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]));
 
 const polar = (cx, cy, r, deg) => {
   const a = (deg * Math.PI) / 180;
@@ -165,6 +169,76 @@ ${mark()}
 </svg>
 `;
 
+/**
+ * AI and automation stack.
+ *
+ * Rendered here rather than with skillicons or shields: neither carries
+ * marks for Claude, Codex, n8n or OpenClaw, and mixing badge styles into
+ * the icon rows looks like an afterthought. Chips are laid out by measured
+ * width so the row stays centred whatever the labels say.
+ */
+const AI_TOOLS = [
+  { name: 'CLAUDE', note: 'Agents & code' },
+  { name: 'CLAUDE CODE', note: 'Pair programming' },
+  { name: 'CODEX', note: 'Code generation' },
+  { name: 'N8N', note: 'Workflow automation' },
+  { name: 'OBSIDIAN', note: 'Knowledge base' },
+  { name: 'OPENCLAW', note: 'Open-source agent' },
+];
+
+function aiStackSvg() {
+  const W = 900;
+  const CHIP_H = 40, GAP = 13, CHAR = 9.6, TRACK = 1.4;
+  const DOT_ZONE = 26, PAD_RIGHT = 20;
+  const labelW = (label) => label.length * (CHAR + TRACK);
+  const chipW = (label) => Math.round(labelW(label) + DOT_ZONE + PAD_RIGHT);
+
+  // Greedy wrap into rows that fit the plate.
+  const MAX = W - 56;
+  const rows = [[]];
+  for (const tool of AI_TOOLS) {
+    const row = rows[rows.length - 1];
+    const used = row.reduce((a, t) => a + chipW(t.name) + GAP, 0);
+    if (row.length && used + chipW(tool.name) > MAX) rows.push([tool]);
+    else row.push(tool);
+  }
+
+  const TOP = 76;
+  const H = TOP + rows.length * (CHIP_H + GAP) + 34;
+
+  const chips = rows.map((row, ri) => {
+    const total = row.reduce((a, t) => a + chipW(t.name), 0) + GAP * (row.length - 1);
+    let x = (W - total) / 2;
+    const y = TOP + ri * (CHIP_H + GAP);
+    return row.map((tool, ci) => {
+      const w = chipW(tool.name);
+      const cx = x;
+      x += w + GAP;
+      return `  <g opacity="0">
+    <rect x="${n(cx)}" y="${y}" width="${w}" height="${CHIP_H}" rx="${CHIP_H / 2}" fill="#101010" stroke="#2b2b2b"/>
+    <circle cx="${n(cx + 14)}" cy="${y + CHIP_H / 2}" r="3.4" fill="${RED}"/>
+    <text class="sans chip" x="${n(cx + DOT_ZONE)}" y="${y + CHIP_H / 2 + 5}">${esc(tool.name)}</text>
+    <title>${esc(tool.name)} — ${esc(tool.note)}</title>
+    <animate attributeName="opacity" from="0" to="1" begin="${(0.07 * (ri * 4 + ci)).toFixed(2)}s" dur="0.5s" fill="freeze"/>
+  </g>`;
+    }).join('\n');
+  }).join('\n');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="AI and automation stack: ${esc(AI_TOOLS.map((t) => t.name).join(', '))}">
+<title>AI &amp; automation / IA y automatización</title>
+<style>
+  .sans { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .head { font-size: 14px; letter-spacing: 1.6px; fill: #8a8a8a; }
+  .chip { font-size: 14.5px; font-weight: 600; letter-spacing: 1.4px; fill: #ffffff; }
+</style>
+<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="#0b0b0b" stroke="#232323"/>
+<text class="sans head" x="24" y="34">AI &amp; AUTOMATION<tspan fill="#4a4a4a">  /  IA Y AUTOMATIZACIÓN</tspan></text>
+<rect x="24" y="48" width="${W - 48}" height="1" fill="#232323"/>
+${chips}
+</svg>
+`;
+}
+
 const bannerSvg = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" role="img" aria-label="Hytrex — Clarity. Purpose. Impact. Founder and CEO, Juan Felipe Medina">
 <title>Hytrex · Clarity. Purpose. Impact.</title>
 
@@ -223,7 +297,7 @@ ${mark({ cx: 196, cy: 115, R: 72 })}
 `;
 
 await mkdir(OUT, { recursive: true });
-for (const [name, svg] of [['hytrex-mark.svg', markSvg()], ['banner.svg', bannerSvg()]]) {
+for (const [name, svg] of [['hytrex-mark.svg', markSvg()], ['banner.svg', bannerSvg()], ['ai-stack.svg', aiStackSvg()]]) {
   await writeFile(join(OUT, name), svg, 'utf8');
   console.log(`wrote ${OUT}/${name} (${svg.length} bytes)`);
 }
