@@ -172,6 +172,10 @@ locales con Ollama.*
 
 <br><br>
 
+<img width="100%" alt="Commit streaks / Rachas de commits" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/streak.svg" />
+
+<br><br>
+
 <img width="100%" alt="Language distribution / Distribución por lenguaje" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/languages.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
