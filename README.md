@@ -117,7 +117,24 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 ## Tech Stack &nbsp;/&nbsp; Tecnologías
 
+I work with AI in the loop, not around it. Most things I build start with the question of what can
+be automated, and increasingly that means writing **MCP servers inside the product** so an agent can
+operate it directly instead of a person clicking through screens. **Gestbot** already does this in
+GESTEK. The same approach is going into the aesthetic clinic, so the doctor can handle appointments,
+procedures and records by talking to an agent. **Ardy-IA** was built on local models with Ollama.
+
+*Trabajo con IA dentro del flujo, no alrededor. Casi todo lo que construyo empieza por la pregunta de
+qué se puede automatizar, y cada vez más eso significa escribir **servidores MCP dentro del producto**
+para que un agente lo opere directamente en vez de que una persona pase por pantallas. **Gestbot** ya
+hace esto en GESTEK. El mismo enfoque va para el consultorio estético, para que la doctora maneje
+citas, procedimientos e historias hablando con un agente. **Ardy-IA** se construyó sobre modelos
+locales con Ollama.*
+
 <div align="center">
+
+<img width="100%" alt="AI and automation tooling: Claude, Claude Code, Cursor, Copilot, Codex, Ollama, MCP, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
+
+<br>
 
 **Languages** &nbsp;·&nbsp; *Lenguajes*
 
@@ -152,6 +169,10 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 <div align="center">
 
 <img width="100%" alt="GitHub overview / Resumen de GitHub" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/stats.svg" />
+
+<br><br>
+
+<img width="100%" alt="Commit streaks / Rachas de commits" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/streak.svg" />
 
 <br><br>
 

@@ -9,11 +9,14 @@
  * strokes rather than as clean geometry. A seeded PRNG keeps the output
  * byte-identical between runs, so re-running never churns the diff.
  *
- * Outputs assets/hytrex-mark.svg (mark alone) and assets/banner.svg.
+ * Outputs assets/hytrex-mark.svg (mark alone), assets/banner.svg and
+ * assets/ai-stack.svg.
  */
 
 import { writeFile, mkdir } from 'node:fs/promises';
 import { join } from 'node:path';
+
+import { ICONS, ICON_VIEWBOX } from './ai-icons.mjs';
 
 const OUT = 'assets';
 
@@ -34,6 +37,9 @@ function rng(seed) {
 }
 
 const n = (v) => Number(v.toFixed(2));
+
+const esc = (v) =>
+  String(v).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]));
 
 const polar = (cx, cy, r, deg) => {
   const a = (deg * Math.PI) / 180;
@@ -165,6 +171,89 @@ ${mark()}
 </svg>
 `;
 
+/**
+ * AI and automation tooling.
+ *
+ * Rendered here rather than with skillicons or shields: skillicons carries
+ * none of these marks, and dropping badge-style chips into the existing icon
+ * rows would read as an afterthought. Marks come from simple-icons, vendored
+ * in ai-icons.mjs, so the row keeps its no-runtime-dependency property.
+ *
+ * `icon` names a key in ICONS; a tool without one gets a red dot. simple-icons
+ * has no OpenAI mark and none for OpenClaw, so Codex and OpenClaw use the dot.
+ */
+const AI_TOOLS = [
+  { name: 'CLAUDE', icon: 'claude', note: 'Agents and assistants' },
+  { name: 'CLAUDE CODE', icon: 'claudecode', note: 'Agentic development' },
+  { name: 'CURSOR', icon: 'cursor', note: 'AI-assisted editor' },
+  { name: 'COPILOT', icon: 'githubcopilot', note: 'In-editor completion' },
+  { name: 'CODEX', icon: null, note: 'Code generation' },
+  { name: 'OLLAMA', icon: 'ollama', note: 'Local models — used to build Ardy-IA' },
+  { name: 'MCP', icon: 'modelcontextprotocol', note: 'Model Context Protocol servers' },
+  { name: 'N8N', icon: 'n8n', note: 'Workflow automation' },
+  { name: 'OBSIDIAN', icon: 'obsidian', note: 'Knowledge base' },
+  { name: 'OPENCLAW', icon: null, note: 'Open-source agent' },
+];
+
+function aiStackSvg() {
+  const W = 900;
+  const CHIP_H = 42, GAP = 12, CHAR = 9.6, TRACK = 1.4;
+  const GLYPH = 17, MARK_ZONE = 36, PAD_RIGHT = 20;
+  const labelW = (label) => label.length * (CHAR + TRACK);
+  const chipW = (label) => Math.round(labelW(label) + MARK_ZONE + PAD_RIGHT);
+
+  // Greedy wrap into rows that fit the plate.
+  const MAX = W - 56;
+  const rows = [[]];
+  for (const tool of AI_TOOLS) {
+    const row = rows[rows.length - 1];
+    const used = row.reduce((a, t) => a + chipW(t.name) + GAP, 0);
+    if (row.length && used + chipW(tool.name) > MAX) rows.push([tool]);
+    else row.push(tool);
+  }
+
+  const TOP = 78;
+  const H = TOP + rows.length * (CHIP_H + GAP) + 32;
+
+  let order = 0;
+  const chips = rows.map((row, ri) => {
+    const total = row.reduce((a, t) => a + chipW(t.name), 0) + GAP * (row.length - 1);
+    let x = (W - total) / 2;
+    const y = TOP + ri * (CHIP_H + GAP);
+    return row.map((tool) => {
+      const w = chipW(tool.name);
+      const cx = x;
+      x += w + GAP;
+      const my = y + (CHIP_H - GLYPH) / 2;
+      const scale = GLYPH / ICON_VIEWBOX;
+      const glyph = tool.icon && ICONS[tool.icon]
+        ? `<g transform="translate(${n(cx + 13)} ${n(my)}) scale(${n(scale)})"><path d="${ICONS[tool.icon]}" fill="#ffffff"/></g>`
+        : `<circle cx="${n(cx + 21)}" cy="${y + CHIP_H / 2}" r="3.6" fill="${RED}"/>`;
+      return `  <g opacity="0">
+    <rect x="${n(cx)}" y="${y}" width="${w}" height="${CHIP_H}" rx="${CHIP_H / 2}" fill="#101010" stroke="#2b2b2b"/>
+    ${glyph}
+    <text class="sans chip" x="${n(cx + MARK_ZONE)}" y="${y + CHIP_H / 2 + 5}">${esc(tool.name)}</text>
+    <title>${esc(tool.name)} — ${esc(tool.note)}</title>
+    <animate attributeName="opacity" from="0" to="1" begin="${(0.06 * order++).toFixed(2)}s" dur="0.5s" fill="freeze"/>
+  </g>`;
+    }).join('\n');
+  }).join('\n');
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="AI and automation stack: ${esc(AI_TOOLS.map((t) => t.name).join(', '))}">
+<title>AI &amp; automation / IA y automatización</title>
+<style>
+  .sans { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .head { font-size: 14px; letter-spacing: 1.6px; fill: #8a8a8a; }
+  .chip { font-size: 14.5px; font-weight: 600; letter-spacing: 1.4px; fill: #ffffff; }
+</style>
+<rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="#0b0b0b" stroke="#232323"/>
+<text class="sans head" x="24" y="34">AI &amp; AUTOMATION TOOLING<tspan fill="#4a4a4a">  /  HERRAMIENTAS DE IA Y AUTOMATIZACIÓN</tspan></text>
+<rect x="24" y="48" width="${W - 48}" height="1" fill="#232323"/>
+${chips}
+</svg>
+`;
+}
+
 const bannerSvg = () => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" width="900" height="230" role="img" aria-label="Hytrex — Clarity. Purpose. Impact. Founder and CEO, Juan Felipe Medina">
 <title>Hytrex · Clarity. Purpose. Impact.</title>
 
@@ -223,7 +312,7 @@ ${mark({ cx: 196, cy: 115, R: 72 })}
 `;
 
 await mkdir(OUT, { recursive: true });
-for (const [name, svg] of [['hytrex-mark.svg', markSvg()], ['banner.svg', bannerSvg()]]) {
+for (const [name, svg] of [['hytrex-mark.svg', markSvg()], ['banner.svg', bannerSvg()], ['ai-stack.svg', aiStackSvg()]]) {
   await writeFile(join(OUT, name), svg, 'utf8');
   console.log(`wrote ${OUT}/${name} (${svg.length} bytes)`);
 }
