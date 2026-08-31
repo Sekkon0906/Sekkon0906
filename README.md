@@ -117,7 +117,19 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 ## Tech Stack &nbsp;/&nbsp; Tecnologías
 
+AI is part of how I build, not a demo bolted on top: agents that execute real actions against a
+running platform (Gestbot, inside GESTEK), automation pipelines that remove manual steps, and
+AI-assisted development as part of the daily loop.
+
+*La IA es parte de cómo construyo, no un demo pegado encima: agentes que ejecutan acciones reales
+sobre una plataforma en marcha (Gestbot, dentro de GESTEK), pipelines de automatización que quitan
+pasos manuales, y desarrollo asistido por IA como parte del día a día.*
+
 <div align="center">
+
+<img width="100%" alt="AI and automation stack: Claude, Claude Code, Codex, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
+
+<br>
 
 **Languages** &nbsp;·&nbsp; *Lenguajes*
 
