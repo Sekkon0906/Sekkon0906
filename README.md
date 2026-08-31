@@ -141,13 +141,13 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,postman,vercel,idea,androidstudio,vscode,figma&theme=dark" />
 
-<br><br>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
-<img width="100%" alt="AI and automation tooling: Claude, Claude Code, Cursor, Copilot, Codex, Ollama, MCP, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
+</div>
 
 <br>
 
-</div>
+## AI &amp; Automation &nbsp;/&nbsp; IA y automatización
 
 I work with AI in the loop, not around it. Most things I build start with the question of what can
 be automated, and increasingly that means writing **MCP servers inside the product** so an agent can
@@ -163,6 +163,8 @@ citas, procedimientos e historias hablando con un agente. **Ardy-IA** se constru
 locales con Ollama.*
 
 <div align="center">
+
+<img width="100%" alt="AI and automation tooling: Claude, Claude Code, Cursor, Copilot, Codex, Ollama, MCP, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 

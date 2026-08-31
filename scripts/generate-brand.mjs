@@ -247,7 +247,7 @@ function aiStackSvg() {
   .chip { font-size: 14.5px; font-weight: 600; letter-spacing: 1.4px; fill: #ffffff; }
 </style>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="#0b0b0b" stroke="#232323"/>
-<text class="sans head" x="24" y="34">AI &amp; AUTOMATION TOOLING<tspan fill="#4a4a4a">  /  HERRAMIENTAS DE IA Y AUTOMATIZACIÓN</tspan></text>
+<text class="sans head" x="24" y="34">TOOLS I WORK WITH<tspan fill="#4a4a4a">  /  HERRAMIENTAS CON LAS QUE ESTOY FAMILIARIZADO</tspan></text>
 <rect x="24" y="48" width="${W - 48}" height="1" fill="#232323"/>
 ${chips}
 </svg>
