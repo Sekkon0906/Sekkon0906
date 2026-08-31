@@ -16,6 +16,8 @@
 import { writeFile, mkdir } from 'node:fs/promises';
 import { join } from 'node:path';
 
+import { ICONS, ICON_VIEWBOX } from './ai-icons.mjs';
+
 const OUT = 'assets';
 
 const RED = '#e10600';
@@ -170,28 +172,35 @@ ${mark()}
 `;
 
 /**
- * AI and automation stack.
+ * AI and automation tooling.
  *
- * Rendered here rather than with skillicons or shields: neither carries
- * marks for Claude, Codex, n8n or OpenClaw, and mixing badge styles into
- * the icon rows looks like an afterthought. Chips are laid out by measured
- * width so the row stays centred whatever the labels say.
+ * Rendered here rather than with skillicons or shields: skillicons carries
+ * none of these marks, and dropping badge-style chips into the existing icon
+ * rows would read as an afterthought. Marks come from simple-icons, vendored
+ * in ai-icons.mjs, so the row keeps its no-runtime-dependency property.
+ *
+ * `icon` names a key in ICONS; a tool without one gets a red dot. simple-icons
+ * has no OpenAI mark and none for OpenClaw, so Codex and OpenClaw use the dot.
  */
 const AI_TOOLS = [
-  { name: 'CLAUDE', note: 'Agents & code' },
-  { name: 'CLAUDE CODE', note: 'Pair programming' },
-  { name: 'CODEX', note: 'Code generation' },
-  { name: 'N8N', note: 'Workflow automation' },
-  { name: 'OBSIDIAN', note: 'Knowledge base' },
-  { name: 'OPENCLAW', note: 'Open-source agent' },
+  { name: 'CLAUDE', icon: 'claude', note: 'Agents and assistants' },
+  { name: 'CLAUDE CODE', icon: 'claudecode', note: 'Agentic development' },
+  { name: 'CURSOR', icon: 'cursor', note: 'AI-assisted editor' },
+  { name: 'COPILOT', icon: 'githubcopilot', note: 'In-editor completion' },
+  { name: 'CODEX', icon: null, note: 'Code generation' },
+  { name: 'OLLAMA', icon: 'ollama', note: 'Local models — used to build Ardy-IA' },
+  { name: 'MCP', icon: 'modelcontextprotocol', note: 'Model Context Protocol servers' },
+  { name: 'N8N', icon: 'n8n', note: 'Workflow automation' },
+  { name: 'OBSIDIAN', icon: 'obsidian', note: 'Knowledge base' },
+  { name: 'OPENCLAW', icon: null, note: 'Open-source agent' },
 ];
 
 function aiStackSvg() {
   const W = 900;
-  const CHIP_H = 40, GAP = 13, CHAR = 9.6, TRACK = 1.4;
-  const DOT_ZONE = 26, PAD_RIGHT = 20;
+  const CHIP_H = 42, GAP = 12, CHAR = 9.6, TRACK = 1.4;
+  const GLYPH = 17, MARK_ZONE = 36, PAD_RIGHT = 20;
   const labelW = (label) => label.length * (CHAR + TRACK);
-  const chipW = (label) => Math.round(labelW(label) + DOT_ZONE + PAD_RIGHT);
+  const chipW = (label) => Math.round(labelW(label) + MARK_ZONE + PAD_RIGHT);
 
   // Greedy wrap into rows that fit the plate.
   const MAX = W - 56;
@@ -203,23 +212,29 @@ function aiStackSvg() {
     else row.push(tool);
   }
 
-  const TOP = 76;
-  const H = TOP + rows.length * (CHIP_H + GAP) + 34;
+  const TOP = 78;
+  const H = TOP + rows.length * (CHIP_H + GAP) + 32;
 
+  let order = 0;
   const chips = rows.map((row, ri) => {
     const total = row.reduce((a, t) => a + chipW(t.name), 0) + GAP * (row.length - 1);
     let x = (W - total) / 2;
     const y = TOP + ri * (CHIP_H + GAP);
-    return row.map((tool, ci) => {
+    return row.map((tool) => {
       const w = chipW(tool.name);
       const cx = x;
       x += w + GAP;
+      const my = y + (CHIP_H - GLYPH) / 2;
+      const scale = GLYPH / ICON_VIEWBOX;
+      const glyph = tool.icon && ICONS[tool.icon]
+        ? `<g transform="translate(${n(cx + 13)} ${n(my)}) scale(${n(scale)})"><path d="${ICONS[tool.icon]}" fill="#ffffff"/></g>`
+        : `<circle cx="${n(cx + 21)}" cy="${y + CHIP_H / 2}" r="3.6" fill="${RED}"/>`;
       return `  <g opacity="0">
     <rect x="${n(cx)}" y="${y}" width="${w}" height="${CHIP_H}" rx="${CHIP_H / 2}" fill="#101010" stroke="#2b2b2b"/>
-    <circle cx="${n(cx + 14)}" cy="${y + CHIP_H / 2}" r="3.4" fill="${RED}"/>
-    <text class="sans chip" x="${n(cx + DOT_ZONE)}" y="${y + CHIP_H / 2 + 5}">${esc(tool.name)}</text>
+    ${glyph}
+    <text class="sans chip" x="${n(cx + MARK_ZONE)}" y="${y + CHIP_H / 2 + 5}">${esc(tool.name)}</text>
     <title>${esc(tool.name)} — ${esc(tool.note)}</title>
-    <animate attributeName="opacity" from="0" to="1" begin="${(0.07 * (ri * 4 + ci)).toFixed(2)}s" dur="0.5s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" begin="${(0.06 * order++).toFixed(2)}s" dur="0.5s" fill="freeze"/>
   </g>`;
     }).join('\n');
   }).join('\n');
@@ -232,7 +247,7 @@ function aiStackSvg() {
   .chip { font-size: 14.5px; font-weight: 600; letter-spacing: 1.4px; fill: #ffffff; }
 </style>
 <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" rx="12" fill="#0b0b0b" stroke="#232323"/>
-<text class="sans head" x="24" y="34">AI &amp; AUTOMATION<tspan fill="#4a4a4a">  /  IA Y AUTOMATIZACIÓN</tspan></text>
+<text class="sans head" x="24" y="34">AI &amp; AUTOMATION TOOLING<tspan fill="#4a4a4a">  /  HERRAMIENTAS DE IA Y AUTOMATIZACIÓN</tspan></text>
 <rect x="24" y="48" width="${W - 48}" height="1" fill="#232323"/>
 ${chips}
 </svg>
