@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 210" width="900" height="210" role="img" aria-label="Hytrex — Clarity. Purpose. Impact.">
+  <title>Hytrex · Clarity. Purpose. Impact.</title>
+
+  <defs>
+    <!-- Brand red bloom, off to one side so the wordmark stays on black -->
+    <radialGradient id="bloom" cx="0.78" cy="0.85" r="0.6">
+      <stop offset="0%"   stop-color="#e10600" stop-opacity="0.30" />
+      <stop offset="55%"  stop-color="#e10600" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#e10600" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="bloom2" cx="0.16" cy="0.15" r="0.5">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.07" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Sheen that drifts across the plate -->
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Rule under the tagline, brightest at the centre -->
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#e10600" stop-opacity="0" />
+      <stop offset="50%"  stop-color="#e10600" stop-opacity="1" />
+      <stop offset="100%" stop-color="#e10600" stop-opacity="0" />
+    </linearGradient>
+
+    <clipPath id="plate">
+      <rect x="0" y="0" width="900" height="210" rx="14" />
+    </clipPath>
+  </defs>
+
+  <style>
+    .sans { font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .mark    { font-size: 62px; font-weight: 600; letter-spacing: 17px; fill: #ffffff; }
+    .tagline { font-size: 17px; font-weight: 500; letter-spacing: 7.5px; fill: #d8d8d8; }
+    .kicker  { font-size: 13px; font-weight: 500; letter-spacing: 4.5px; fill: #8a8a8a; }
+    .dot     { fill: #e10600; }
+  </style>
+
+  <g clip-path="url(#plate)">
+    <rect width="900" height="210" fill="#000000" />
+    <rect width="900" height="210" fill="url(#bloom)" />
+    <rect width="900" height="210" fill="url(#bloom2)" />
+
+    <rect x="-420" y="0" width="420" height="210" fill="url(#sheen)">
+      <animate attributeName="x" values="-420;900" dur="11s" repeatCount="indefinite" />
+    </rect>
+
+    <!-- Wordmark. The trailing X carries the brand red, as in the identity. -->
+    <text class="sans mark" x="458" y="96" text-anchor="middle">HYTRE<tspan fill="#e10600">X</tspan></text>
+
+    <rect x="286" y="123" width="336" height="2.5" fill="url(#rule)" />
+
+    <!-- Tagline. Each period is red, the way the identity sets it. -->
+    <text class="sans tagline" x="454" y="158" text-anchor="middle">CLARITY<tspan class="dot">.</tspan> PURPOSE<tspan class="dot">.</tspan> IMPACT<tspan class="dot">.</tspan></text>
+
+    <text class="sans kicker" x="452" y="188" text-anchor="middle">FOUNDER &amp; CEO &#183; JUAN FELIPE MEDINA</text>
+  </g>
+
+  <rect x="0.5" y="0.5" width="899" height="209" rx="14" fill="none" stroke="#242424" />
+</svg>
