@@ -85,7 +85,7 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 |:--|:--|:--:|
 | **GESTEK — Event OS** | Gestbot agent actions, white-label rollout<br>*Acciones del agente Gestbot, despliegue marca blanca* | `Active · Activo` |
 | **Consultorio Estético** | Migrating modules to the new Next.js structure<br>*Migrando módulos a la nueva estructura Next.js* | `In migration · En migración` |
-| **Walnut / Ardys** | Points engine and rewards flow built, on hold<br>*Motor de puntos y flujo de recompensas listos, en pausa* | `Paused · En pausa` |
+| **Walnut / Ardys** &nbsp;·&nbsp; BBMC S.S.A | Points engine and rewards flow built, on hold<br>*Motor de puntos y flujo de recompensas listos, en pausa* | `Paused · En pausa` |
 | **CoffeeOps** | Inventory and batch tracking shipped, on hold<br>*Inventario y trazabilidad de lotes entregados, en pausa* | `Paused · En pausa` |
 
 </div>
@@ -103,7 +103,7 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 | Project · Proyecto | What it is · Qué es | Stack |
 |:--|:--|:--|
 | [**GESTEK — Event OS**](https://github.com/Sekkon0906/GestorEventosMarcaBlanca) | White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, MercadoPago payments, role-based teams, agenda, API and webhooks.<br>*SaaS de eventos marca blanca con Gestbot, un agente de IA que ejecuta acciones reales. Boletería con QR, pagos MercadoPago, equipos con roles, agenda, API y webhooks.* | `Node.js` `Express` `MongoDB` |
-| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br>*Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.* | `React` `Node.js` `PostgreSQL` `Docker` |
+| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | Built at **[BBMC S.S.A](https://github.com/BBMC-S-S-A)**. Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br>*Desarrollado en **BBMC S.S.A**. Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.* | `React` `Node.js` `PostgreSQL` `Docker` |
 | [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, secured with Auth0.<br>*Plataforma para clínica estética: agendamiento de citas, catálogo de procedimientos, gestión de usuarios y panel de administración, con autenticación Auth0.* | `Next.js` `TypeScript` `React` `Auth0` |
 | [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br>*SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.* | `Node.js` `Express` `MongoDB` |
 
@@ -117,24 +117,7 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 ## Tech Stack &nbsp;/&nbsp; Tecnologías
 
-I work with AI in the loop, not around it. Most things I build start with the question of what can
-be automated, and increasingly that means writing **MCP servers inside the product** so an agent can
-operate it directly instead of a person clicking through screens. **Gestbot** already does this in
-GESTEK. The same approach is going into the aesthetic clinic, so the doctor can handle appointments,
-procedures and records by talking to an agent. **Ardy-IA** was built on local models with Ollama.
-
-*Trabajo con IA dentro del flujo, no alrededor. Casi todo lo que construyo empieza por la pregunta de
-qué se puede automatizar, y cada vez más eso significa escribir **servidores MCP dentro del producto**
-para que un agente lo opere directamente en vez de que una persona pase por pantallas. **Gestbot** ya
-hace esto en GESTEK. El mismo enfoque va para el consultorio estético, para que la doctora maneje
-citas, procedimientos e historias hablando con un agente. **Ardy-IA** se construyó sobre modelos
-locales con Ollama.*
-
 <div align="center">
-
-<img width="100%" alt="AI and automation tooling: Claude, Claude Code, Cursor, Copilot, Codex, Ollama, MCP, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
-
-<br>
 
 **Languages** &nbsp;·&nbsp; *Lenguajes*
 
@@ -157,6 +140,29 @@ locales con Ollama.*
 **DevOps & Tools** &nbsp;·&nbsp; *DevOps y herramientas*
 
 <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,postman,vercel,idea,androidstudio,vscode,figma&theme=dark" />
+
+<br><br>
+
+<img width="100%" alt="AI and automation tooling: Claude, Claude Code, Cursor, Copilot, Codex, Ollama, MCP, n8n, Obsidian, OpenClaw" src="https://raw.githubusercontent.com/Sekkon0906/Sekkon0906/main/assets/ai-stack.svg" />
+
+<br>
+
+</div>
+
+I work with AI in the loop, not around it. Most things I build start with the question of what can
+be automated, and increasingly that means writing **MCP servers inside the product** so an agent can
+operate it directly instead of a person clicking through screens. **Gestbot** already does this in
+GESTEK. The same approach is going into the aesthetic clinic, so the doctor can handle appointments,
+procedures and records by talking to an agent. **Ardy-IA** was built on local models with Ollama.
+
+*Trabajo con IA dentro del flujo, no alrededor. Casi todo lo que construyo empieza por la pregunta de
+qué se puede automatizar, y cada vez más eso significa escribir **servidores MCP dentro del producto**
+para que un agente lo opere directamente en vez de que una persona pase por pantallas. **Gestbot** ya
+hace esto en GESTEK. El mismo enfoque va para el consultorio estético, para que la doctora maneje
+citas, procedimientos e historias hablando con un agente. **Ardy-IA** se construyó sobre modelos
+locales con Ollama.*
+
+<div align="center">
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 

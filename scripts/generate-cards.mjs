@@ -40,6 +40,8 @@ const esc = (s) =>
   String(s ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[c]));
 
+const round = (v) => Number(v.toFixed(2));
+
 const fmt = (n) => (n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n));
 
 const panel = (w, h) =>
@@ -277,31 +279,89 @@ const shortDate = (iso) => {
 };
 const range = (a, b) => (a && b ? (a === b ? shortDate(a) : `${shortDate(a)} – ${shortDate(b)}`) : '—');
 
+/**
+ * A flame, drawn base-up so it can be scaled about its own root.
+ *
+ * SMIL scales about the local origin, so the flicker is wrapped in nested
+ * groups that walk to the flame's base, scale, and walk back. Scaling about
+ * the centre instead would make the flame slide off its footing.
+ */
+function flame(cx, baseY, w = 96, h = 118, lit = true) {
+  const sx = w / 100, sy = h / 120;
+  const outer = 'M50,120 C20,110 8,86 16,60 C22,42 38,32 42,14 C44,6 43,2 40,0 '
+    + 'C70,10 84,36 84,60 C84,90 70,111 50,120 Z';
+  const inner = 'M50,120 C36,113 29,97 35,81 C39,69 50,60 52,47 C55,58 63,67 66,79 '
+    + 'C70,97 62,113 50,120 Z';
+
+  return `<g transform="translate(${round(cx - w / 2)} ${round(baseY - h)}) scale(${round(sx)} ${round(sy)})">
+    <g transform="translate(50 120)">
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          values="1 1; 1.04 0.96; 0.97 1.05; 1.02 0.99; 1 1"
+          keyTimes="0;0.25;0.5;0.75;1" dur="2.6s" repeatCount="indefinite"/>
+        <g transform="translate(-50 -120)">
+          <path d="${outer}" fill="${lit ? 'url(#flame)' : 'url(#flameOut)'}"/>
+          <path d="${inner}" fill="${lit ? '#6d0200' : '#1c1c1c'}" opacity="0.85"/>
+        </g>
+      </g>
+    </g>
+  </g>`;
+}
+
 function streakCard(user) {
-  const s = streaks(user);
+  const st = streaks(user);
+
+  const W = 820, H = 238;
+  const lit = st.current > 0;
+  const HERO = 268;               // width of the flame block
   const tiles = [
-    [['Current streak', 'Racha actual'], `${s.current}`, range(s.currentStart, s.currentEnd), true],
-    [['Longest streak', 'Racha más larga'], `${s.longest}`, range(s.longestStart, s.longestEnd), false],
-    [['Active days', 'Días activos'], `${s.active}`, `of ${s.total} · de ${s.total}`, false],
-    [['Best day', 'Mejor día'], `${s.best?.contributionCount ?? 0}`, shortDate(s.best?.date) || '—', false],
+    [['Longest streak', 'Racha más larga'], `${st.longest}`, range(st.longestStart, st.longestEnd)],
+    [['Active days', 'Días activos'], `${st.active}`, `of ${st.total} · de ${st.total}`],
+    [['Best day', 'Mejor día'], `${st.best?.contributionCount ?? 0}`, shortDate(st.best?.date) || '—'],
   ];
+  const colW = (W - 24 - HERO) / tiles.length;
 
-  const W = 820, H = 176;
-  const colW = (W - 48) / tiles.length;
+  const defs = `<defs>
+  <linearGradient id="flame" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0%"   stop-color="#8c0200"/>
+    <stop offset="45%"  stop-color="${C.red}"/>
+    <stop offset="100%" stop-color="#ff5a3c"/>
+  </linearGradient>
+  <linearGradient id="flameOut" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0%"   stop-color="#2a2a2a"/>
+    <stop offset="100%" stop-color="#565656"/>
+  </linearGradient>
+  <radialGradient id="ember" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0%"   stop-color="${lit ? C.red : '#666666'}" stop-opacity="${lit ? 0.3 : 0.08}"/>
+    <stop offset="100%" stop-color="${lit ? C.red : '#666666'}" stop-opacity="0"/>
+  </radialGradient>
+</defs>`;
 
-  const body = `
+  const heroCx = 24 + HERO / 2;
+  const hero = `
+  <ellipse cx="${heroCx}" cy="128" rx="120" ry="84" fill="url(#ember)"/>
+  ${flame(heroCx, 186, 96, 118, lit)}
+  <text class="f" x="${heroCx}" y="148" text-anchor="middle" font-size="46" font-weight="700" fill="#ffffff">${st.current}</text>
+  <text class="f label" x="${heroCx}" y="172" text-anchor="middle" fill="${lit ? '#ffd9d4' : C.muted}">${st.current === 1 ? 'DAY · DÍA' : 'DAYS · DÍAS'}</text>
+  <text class="f label" x="${heroCx}" y="204" text-anchor="middle" fill="${C.muted}">CURRENT STREAK · RACHA ACTUAL</text>
+  <text class="f" x="${heroCx}" y="222" text-anchor="middle" font-size="11" fill="${C.dim}">${esc(range(st.currentStart, st.currentEnd))}</text>
+  <line x1="${24 + HERO}" y1="62" x2="${24 + HERO}" y2="${H - 24}" stroke="${C.border}"/>`;
+
+  const right = tiles.map(([[en, es], value, sub], i) => {
+    const cx = 24 + HERO + colW * i + colW / 2;
+    return `<g opacity="0">
+      <text class="f value" x="${round(cx)}" y="126" text-anchor="middle" fill="${C.text}">${esc(value)}</text>
+      <text class="f label" x="${round(cx)}" y="154" text-anchor="middle" fill="${C.muted}">${esc(en.toUpperCase())}</text>
+      <text class="f label" x="${round(cx)}" y="172" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
+      <text class="f" x="${round(cx)}" y="196" text-anchor="middle" font-size="11" fill="${C.dim}">${esc(sub)}</text>
+      <animate attributeName="opacity" from="0" to="1" begin="${(0.1 * i).toFixed(2)}s" dur="0.5s" fill="freeze"/>
+    </g>${i < tiles.length - 1 ? `<line x1="${round(24 + HERO + colW * (i + 1))}" y1="86" x2="${round(24 + HERO + colW * (i + 1))}" y2="196" stroke="${C.border}"/>` : ''}`;
+  }).join('');
+
+  const body = `${defs}
   <text class="f head" x="24" y="32">STREAKS · LAST YEAR<tspan fill="${C.dim}">  /  RACHAS · ÚLTIMO AÑO</tspan></text>
   <line x1="24" y1="46" x2="${W - 24}" y2="46" stroke="${C.border}"/>
-  ${tiles.map(([[en, es], value, sub, accent], i) => {
-    const cx = 24 + colW * i + colW / 2;
-    return `<g opacity="0">
-      <text class="f value" x="${cx}" y="98" text-anchor="middle" fill="${accent ? C.red : C.text}">${esc(value)}</text>
-      <text class="f label" x="${cx}" y="124" text-anchor="middle" fill="${C.muted}">${esc(en.toUpperCase())}</text>
-      <text class="f label" x="${cx}" y="142" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
-      <text class="f" x="${cx}" y="162" text-anchor="middle" font-size="11" fill="${C.dim}">${esc(sub)}</text>
-      <animate attributeName="opacity" from="0" to="1" begin="${(0.08 * i).toFixed(2)}s" dur="0.5s" fill="freeze"/>
-    </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="66" x2="${24 + colW * (i + 1)}" y2="156" stroke="${C.border}"/>` : ''}`;
-  }).join('')}`;
+  ${hero}${right}`;
 
   return { name: 'streak.svg', svg: doc(W, H, 'Commit streaks / Rachas de commits', body) };
 }
