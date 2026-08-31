@@ -51,8 +51,8 @@ const doc = (w, h, title, body) =>
 <style>
   .f { font-family: ${FONT}; }
   .m { font-family: ${MONO}; }
-  .label { font-size: 13px; letter-spacing: 0.8px; fill: ${C.muted}; }
-  .value { font-size: 34px; font-weight: 700; fill: ${C.text}; }
+  .label { font-size: 13px; letter-spacing: 0.8px; }
+  .value { font-size: 34px; font-weight: 700; }
   .head  { font-size: 14px; letter-spacing: 1.6px; fill: ${C.muted}; }
 </style>
 ${panel(w, h)}
@@ -226,6 +226,86 @@ function contributionsCard(user) {
   return { name: 'contributions.svg', svg: doc(W, H, `${total} contributions in the last year / contribuciones en el último año`, body) };
 }
 
+/**
+ * Commit streaks.
+ *
+ * Computed from the same contribution calendar the grid uses, which only
+ * covers the trailing year — so these are streaks within that window, and
+ * the card says so rather than implying an all-time figure.
+ *
+ * A zero on the final day does not break the current streak: that day is
+ * still in progress, so it is skipped before counting backwards. Any other
+ * zero ends it.
+ */
+function streaks(user) {
+  const days = user.contributionsCollection.contributionCalendar.weeks
+    .flatMap((w) => w.contributionDays)
+    .sort((a, b) => (a.date < b.date ? -1 : 1));
+
+  let longest = 0, longestEnd = null, run = 0, runStart = null;
+  let longestStart = null;
+  for (const d of days) {
+    if (d.contributionCount > 0) {
+      if (run === 0) runStart = d.date;
+      run++;
+      if (run > longest) { longest = run; longestStart = runStart; longestEnd = d.date; }
+    } else {
+      run = 0;
+    }
+  }
+
+  let i = days.length - 1;
+  if (i >= 0 && days[i].contributionCount === 0) i--; // today may not be over
+  let current = 0, currentEnd = i >= 0 ? days[i].date : null, currentStart = null;
+  for (; i >= 0 && days[i].contributionCount > 0; i--) {
+    current++;
+    currentStart = days[i].date;
+  }
+  if (current === 0) { currentEnd = null; }
+
+  const active = days.filter((d) => d.contributionCount > 0).length;
+  const best = days.reduce((a, d) => (d.contributionCount > a.contributionCount ? d : a), days[0]);
+
+  return { current, currentStart, currentEnd, longest, longestStart, longestEnd, active, best, total: days.length };
+}
+
+const MONTHS_SHORT = MONTHS;
+const shortDate = (iso) => {
+  if (!iso) return '';
+  const d = new Date(iso + 'T00:00:00Z');
+  return `${MONTHS_SHORT[d.getUTCMonth()]} ${d.getUTCDate()}`;
+};
+const range = (a, b) => (a && b ? (a === b ? shortDate(a) : `${shortDate(a)} – ${shortDate(b)}`) : '—');
+
+function streakCard(user) {
+  const s = streaks(user);
+  const tiles = [
+    [['Current streak', 'Racha actual'], `${s.current}`, range(s.currentStart, s.currentEnd), true],
+    [['Longest streak', 'Racha más larga'], `${s.longest}`, range(s.longestStart, s.longestEnd), false],
+    [['Active days', 'Días activos'], `${s.active}`, `of ${s.total} · de ${s.total}`, false],
+    [['Best day', 'Mejor día'], `${s.best?.contributionCount ?? 0}`, shortDate(s.best?.date) || '—', false],
+  ];
+
+  const W = 820, H = 176;
+  const colW = (W - 48) / tiles.length;
+
+  const body = `
+  <text class="f head" x="24" y="32">STREAKS · LAST YEAR<tspan fill="${C.dim}">  /  RACHAS · ÚLTIMO AÑO</tspan></text>
+  <line x1="24" y1="46" x2="${W - 24}" y2="46" stroke="${C.border}"/>
+  ${tiles.map(([[en, es], value, sub, accent], i) => {
+    const cx = 24 + colW * i + colW / 2;
+    return `<g opacity="0">
+      <text class="f value" x="${cx}" y="98" text-anchor="middle" fill="${accent ? C.red : C.text}">${esc(value)}</text>
+      <text class="f label" x="${cx}" y="124" text-anchor="middle" fill="${C.muted}">${esc(en.toUpperCase())}</text>
+      <text class="f label" x="${cx}" y="142" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
+      <text class="f" x="${cx}" y="162" text-anchor="middle" font-size="11" fill="${C.dim}">${esc(sub)}</text>
+      <animate attributeName="opacity" from="0" to="1" begin="${(0.08 * i).toFixed(2)}s" dur="0.5s" fill="freeze"/>
+    </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="66" x2="${24 + colW * (i + 1)}" y2="156" stroke="${C.border}"/>` : ''}`;
+  }).join('')}`;
+
+  return { name: 'streak.svg', svg: doc(W, H, 'Commit streaks / Rachas de commits', body) };
+}
+
 /** Headline numbers. */
 function statsCard(user) {
   const c = user.contributionsCollection;
@@ -249,7 +329,7 @@ function statsCard(user) {
     const cx = 24 + colW * i + colW / 2;
     return `<g opacity="0">
       <text class="f value" x="${cx}" y="98" text-anchor="middle" fill="${accent ? C.red : C.text}">${fmt(value)}</text>
-      <text class="f label" x="${cx}" y="124" text-anchor="middle">${esc(en.toUpperCase())}</text>
+      <text class="f label" x="${cx}" y="124" text-anchor="middle" fill="${C.muted}">${esc(en.toUpperCase())}</text>
       <text class="f label" x="${cx}" y="144" text-anchor="middle" fill="${C.dim}">${esc(es.toUpperCase())}</text>
       <animate attributeName="opacity" from="0" to="1" begin="${(0.08 * i).toFixed(2)}s" dur="0.5s" fill="freeze"/>
     </g>${i < tiles.length - 1 ? `<line x1="${24 + colW * (i + 1)}" y1="66" x2="${24 + colW * (i + 1)}" y2="150" stroke="${C.border}"/>` : ''}`;
@@ -310,7 +390,7 @@ function languagesCard(user) {
 async function main() {
   const user = MOCK ? mockData() : await fetchData();
 
-  const cards = [contributionsCard(user), statsCard(user), languagesCard(user)];
+  const cards = [contributionsCard(user), statsCard(user), streakCard(user), languagesCard(user)];
 
   await mkdir(OUT, { recursive: true });
   for (const { name, svg } of cards) {
