@@ -12,12 +12,12 @@
   <text class="f head" x="24" y="32">OVERVIEW<tspan fill="#4a4a4a">  /  RESUMEN</tspan></text>
   <line x1="24" y1="46" x2="796" y2="46" stroke="#232323"/>
   <g opacity="0">
-      <text class="f value" x="88.33333333333333" y="98" text-anchor="middle" fill="#e10600">641</text>
+      <text class="f value" x="88.33333333333333" y="98" text-anchor="middle" fill="#e10600">676</text>
       <text class="f label" x="88.33333333333333" y="124" text-anchor="middle" fill="#8a8a8a">CONTRIBUTIONS</text>
       <text class="f label" x="88.33333333333333" y="144" text-anchor="middle" fill="#4a4a4a">CONTRIBUCIONES</text>
       <animate attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.5s" fill="freeze"/>
     </g><line x1="152.66666666666666" y1="66" x2="152.66666666666666" y2="150" stroke="#232323"/><g opacity="0">
-      <text class="f value" x="217" y="98" text-anchor="middle" fill="#ffffff">586</text>
+      <text class="f value" x="217" y="98" text-anchor="middle" fill="#ffffff">621</text>
       <text class="f label" x="217" y="124" text-anchor="middle" fill="#8a8a8a">COMMITS</text>
       <text class="f label" x="217" y="144" text-anchor="middle" fill="#4a4a4a">COMMITS</text>
       <animate attributeName="opacity" from="0" to="1" begin="0.08s" dur="0.5s" fill="freeze"/>
