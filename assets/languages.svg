@@ -11,23 +11,23 @@
 
   <text class="f head" x="24" y="32">LANGUAGE DISTRIBUTION<tspan fill="#4a4a4a">  /  DISTRIBUCIÓN POR LENGUAJE</tspan></text>
   <line x1="24" y1="46" x2="796" y2="46" stroke="#232323"/>
-  <g opacity="0"><rect x="24" y="66" width="405.14441102153773" height="16" fill="#e10600"><title>JavaScript 52.5%</title></rect><rect x="429.14441102153773" y="66" width="216.9155851968991" height="16" fill="#ffffff"><title>TypeScript 28.1%</title></rect><rect x="646.0599962184368" y="66" width="51.2806676177871" height="16" fill="#b3b3b3"><title>CSS 6.6%</title></rect><rect x="697.3406638362239" y="66" width="46.80651689384694" height="16" fill="#8a8a8a"><title>HTML 6.1%</title></rect><rect x="744.1471807300709" y="66" width="30.2822375394629" height="16" fill="#5f5f5f"><title>PLpgSQL 3.9%</title></rect><rect x="774.4294182695338" y="66" width="12.680667617787098" height="16" fill="#3d3d3d"><title>Python 1.6%</title></rect><rect x="787.1100858873209" y="66" width="8.889914112679094" height="16" fill="#1e1e1e"/><animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
+  <g opacity="0"><rect x="24" y="66" width="409.3330287310762" height="16" fill="#e10600"><title>JavaScript 53.0%</title></rect><rect x="433.3330287310762" y="66" width="209.8130872055943" height="16" fill="#ffffff"><title>TypeScript 27.2%</title></rect><rect x="643.1461159366704" y="66" width="54.755743836718" height="16" fill="#b3b3b3"><title>CSS 7.1%</title></rect><rect x="697.9018597733884" y="66" width="46.54027116247445" height="16" fill="#8a8a8a"><title>HTML 6.0%</title></rect><rect x="744.4421309358629" y="66" width="30.109985532342293" height="16" fill="#5f5f5f"><title>PLpgSQL 3.9%</title></rect><rect x="774.5521164682052" y="66" width="12.608537199882983" height="16" fill="#3d3d3d"><title>Python 1.6%</title></rect><rect x="787.1606536680882" y="66" width="8.83934633191177" height="16" fill="#1e1e1e"/><animate attributeName="opacity" from="0" to="1" dur="0.6s" fill="freeze"/></g>
   <g>
       <rect x="24" y="101" width="11" height="11" rx="2" fill="#e10600"/>
       <text class="f" x="42" y="112" font-size="14" fill="#ffffff">JavaScript</text>
-      <text class="f" x="135" y="112" font-size="13" fill="#4a4a4a">52.5%</text>
+      <text class="f" x="135" y="112" font-size="13" fill="#4a4a4a">53.0%</text>
     </g><g>
       <rect x="281.3333333333333" y="101" width="11" height="11" rx="2" fill="#ffffff"/>
       <text class="f" x="299.3333333333333" y="112" font-size="14" fill="#ffffff">TypeScript</text>
-      <text class="f" x="392.3333333333333" y="112" font-size="13" fill="#4a4a4a">28.1%</text>
+      <text class="f" x="392.3333333333333" y="112" font-size="13" fill="#4a4a4a">27.2%</text>
     </g><g>
       <rect x="538.6666666666666" y="101" width="11" height="11" rx="2" fill="#b3b3b3"/>
       <text class="f" x="556.6666666666666" y="112" font-size="14" fill="#ffffff">CSS</text>
-      <text class="f" x="590.1666666666666" y="112" font-size="13" fill="#4a4a4a">6.6%</text>
+      <text class="f" x="590.1666666666666" y="112" font-size="13" fill="#4a4a4a">7.1%</text>
     </g><g>
       <rect x="24" y="127" width="11" height="11" rx="2" fill="#8a8a8a"/>
       <text class="f" x="42" y="138" font-size="14" fill="#ffffff">HTML</text>
-      <text class="f" x="84" y="138" font-size="13" fill="#4a4a4a">6.1%</text>
+      <text class="f" x="84" y="138" font-size="13" fill="#4a4a4a">6.0%</text>
     </g><g>
       <rect x="281.3333333333333" y="127" width="11" height="11" rx="2" fill="#5f5f5f"/>
       <text class="f" x="299.3333333333333" y="138" font-size="14" fill="#ffffff">PLpgSQL</text>
