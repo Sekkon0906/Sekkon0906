@@ -4,9 +4,9 @@
 
 # Juan Felipe Medina
 
-**Software Developer** &nbsp;·&nbsp; **Information Systems Student** &nbsp;·&nbsp; **Colombia**
+**Full-Stack Developer** &nbsp;·&nbsp; **Ready to hire, eager to learn** &nbsp;·&nbsp; **Colombia**
 
-*Desarrollador de Software &nbsp;·&nbsp; Estudiante de Ingeniería de Sistemas &nbsp;·&nbsp; Colombia*
+*Desarrollador Full-Stack &nbsp;·&nbsp; Listo para contratar y con ganas de aprender &nbsp;·&nbsp; Colombia*
 
 <br>
 
@@ -40,18 +40,21 @@
 
 ## About &nbsp;/&nbsp; Sobre mí
 
-I'm a software developer and information systems student based in Colombia. I build full-stack
-applications with a focus on clean backend architecture and interfaces that stay out of the way.
-My work spans SaaS platforms with AI agents that execute real actions, university-scale digital
-wallets, clinic management systems, and inventory platforms built on Clean Architecture. I care
-about maintainable code, systems that scale past the demo, and shipping things people actually use.
+I'm a full-stack developer based in Colombia, ready to join a team and eager to keep learning. My
+experience is certified: with **Develovers Group** I worked on **GESTEK**, the white-label event
+platform that ran **FESTECH Ibagué 2026** for the City of Ibagué (4,485 tickets and 3,334 attendees
+through access control over three days), and from 2023 to 2026 I owned the platform of an
+**aesthetic medicine clinic** that is now in production. I choose infrastructure for cost and
+portability: I have moved projects from Supabase to Neon + Cloudflare R2 + Railway, and from Render
+and Vercel to a self-managed deployment built with GitHub Actions.
 
-*Soy desarrollador de software y estudiante de ingeniería de sistemas en Colombia. Construyo
-aplicaciones full-stack con foco en arquitectura backend limpia e interfaces que no estorban.
-Mi trabajo va desde plataformas SaaS con agentes de IA que ejecutan acciones reales hasta billeteras
-digitales a escala universitaria, sistemas de gestión clínica y plataformas de inventario sobre
-Clean Architecture. Me importa el código mantenible, los sistemas que escalan más allá del demo,
-y entregar cosas que la gente realmente usa.*
+*Soy desarrollador full-stack en Colombia, listo para sumarme a un equipo y con ganas de seguir
+aprendiendo. Mi experiencia está certificada: con **Develovers Group** trabajé en **GESTEK**, la
+plataforma de eventos de marca blanca con la que se operó **FESTECH Ibagué 2026** para la Alcaldía
+de Ibagué (4.485 boletas y 3.334 asistentes con control de acceso en tres días), y de 2023 a 2026
+estuve a cargo de la plataforma de un **consultorio de medicina estética** que hoy está en
+producción. Elijo la infraestructura por costo y portabilidad: he migrado proyectos de Supabase a
+Neon + Cloudflare R2 + Railway, y de Render y Vercel a un despliegue propio con GitHub Actions.*
 
 <div align="center">
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
@@ -101,16 +104,14 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 <br>
 
-## Currently Building &nbsp;/&nbsp; En qué estoy trabajando
+## Certified Experience &nbsp;/&nbsp; Experiencia certificada
 
 <div align="center">
 
-| Project · Proyecto | Where it stands · En qué va | Status · Estado |
+| Role · Rol | Where · Dónde | When · Cuándo |
 |:--|:--|:--:|
-| **GESTEK — Event OS** | Gestbot agent actions, white-label rollout<br>*Acciones del agente Gestbot, despliegue marca blanca* | `Active · Activo` |
-| **Consultorio Estético** | Migrating modules to the new Next.js structure<br>*Migrando módulos a la nueva estructura Next.js* | `In migration · En migración` |
-| **Walnut / Ardys** &nbsp;·&nbsp; BBMC S.S.A | Points engine and rewards flow built. Development paused, open to offers<br>*Motor de puntos y flujo de recompensas listos. Desarrollo en pausa, abierto a ofertas* | `Open to offers`<br>`Abierto a ofertas` |
-| **CoffeeOps** | Inventory and batch tracking shipped. Development paused, open to offers<br>*Inventario y trazabilidad de lotes entregados. Desarrollo en pausa, abierto a ofertas* | `Open to offers`<br>`Abierto a ofertas` |
+| **Software Developer** — GESTEK, white-label event platform<br>*Desarrollador de software — GESTEK, plataforma de eventos de marca blanca* | Develovers Group S.A.S. | `Mar–Jul 2026` |
+| **Full-Stack Developer** — clinical web platform<br>*Desarrollador full-stack — plataforma web clínica* | Consultorio Estético Dra. Julieth Medina | `2023–2026` |
 
 </div>
 
@@ -124,12 +125,14 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 <div align="center">
 
-| Project · Proyecto | What it is · Qué es | Stack |
+| Project · Proyecto | What it is · Qué es | Architecture & tools · Arquitectura y herramientas |
 |:--|:--|:--|
-| [**GESTEK — Event OS**](https://github.com/Sekkon0906/GestorEventosMarcaBlanca) | White-label event SaaS with Gestbot, an AI agent that executes real actions. QR ticketing, MercadoPago payments, role-based teams, agenda, API and webhooks.<br>*SaaS de eventos marca blanca con Gestbot, un agente de IA que ejecuta acciones reales. Boletería con QR, pagos MercadoPago, equipos con roles, agenda, API y webhooks.* | `Node.js` `Express` `MongoDB` |
-| [**Walnut — University Wallet**](https://github.com/Sekkon0906/wallnut) | **Open to acquisition or continued development.** Built at **[BBMC S.S.A](https://github.com/BBMC-S-S-A)**, where the main repository is private; full source shared under agreement. Gamified digital wallet for students, faculty and admins. The Ardys points system drives event participation and rewards across the campus.<br>**Abierto a venta o a continuar el desarrollo.** Desarrollado en **BBMC S.S.A**, donde el repositorio principal es privado; código completo bajo acuerdo. Billetera digital gamificada para estudiantes, docentes y administradores. El sistema de puntos Ardys impulsa la participación en eventos y las recompensas en el campus.* | `React` `Node.js` `PostgreSQL` `Docker` |
-| [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Platform for an aesthetic clinic: appointment scheduling, procedure catalog, user management and an admin panel, secured with Auth0.<br>*Plataforma para clínica estética: agendamiento de citas, catálogo de procedimientos, gestión de usuarios y panel de administración, con autenticación Auth0.* | `Next.js` `TypeScript` `React` `Auth0` |
-| [**CoffeeOps — Management**](https://github.com/Sekkon0906/Coffee-management) | **Open to acquisition or continued development.** SaaS for coffee shops and producers. Centralises inventory, batch traceability, suppliers, team and real-time analytics.<br>**Abierto a venta o a continuar el desarrollo.** SaaS para cafeterías y productores de café. Centraliza inventario, trazabilidad de lotes, proveedores, equipo y analítica en tiempo real.* | `Node.js` `Express` `MongoDB` |
+| [**GESTEK**](https://github.com/BBMC-S-S-A/gestor-eventos-frontend) | White-label event platform: JWT-signed QR tickets, door control with re-entry, badge printing, Mercado Pago, OAuth2 + MCP connector, 1,800+ automated tests. Ran FESTECH Ibagué 2026.<br>*Plataforma de eventos de marca blanca: boletas con QR firmado, control de puerta con reingreso, escarapelas, Mercado Pago y conector OAuth2 + MCP. Operó FESTECH Ibagué 2026.* | React + Vite (PWA) → Express 5 on cPanel → Supabase Postgres. GitHub Actions, Sentry. *Before: Vercel + Render.* |
+| [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Clinic platform: booking, e-signed consent, admin analytics and an AI copilot; MCP server in integration.<br>*Plataforma clínica: agendamiento, consentimiento con firma electrónica, analítica y copiloto de IA; servidor MCP en integración.* | Next.js 16 on Vercel → Express on Railway → Neon Postgres + Cloudflare R2. Own JWT auth. *Before: Supabase.* |
+| **Lázaro Cloud** | Modular SaaS MVP for a POS/ERP company with 45+ restaurant clients. 1,500+ automated tests.<br>*MVP de SaaS modular para una empresa de POS/ERP con más de 45 clientes de gastronomía.* | Cloudflare Workers + Hono, Next.js 16, Neon, Render, .NET Edge service, GitHub Actions. |
+| [**DevUP**](https://github.com/BBMC-S-S-A/DevUP) | Command center for software teams: E2E-encrypted voice/video, tasks, credentials vault, MCP server.<br>*Centro de mando para equipos: voz y video cifrados, tareas, bóveda de credenciales y servidor MCP.* | Fastify + Next.js 15, PostgreSQL 17 with RLS, WebRTC, Docker, Railway, Cloudflare Workers. |
+| [**Ablaze**](https://github.com/BBMC-S-S-A/Ablaze) | Offline-first training PWA with a deterministic rule engine.<br>*PWA de entrenamiento offline-first con motor de reglas determinista.* | Expo, SQLite WASM on OPFS, Express 5, Drizzle, PostgreSQL. |
+| **SorteosCCM** | Live raffle platform for the Colombian Paso Horse community.<br>*Plataforma de rifas en producción para la comunidad del Caballo Colombiano de Paso.* | Angular 21 on Hostinger → Supabase (RLS, Edge Functions, pg_cron), Resend. |
 
 <a href="https://github.com/Sekkon0906?tab=repositories">See all repositories · Ver todos los repositorios</a>
 
@@ -145,7 +148,7 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 **Languages** &nbsp;·&nbsp; *Lenguajes*
 
-<img src="https://skillicons.dev/icons?i=java,cpp,python,js,ts,php&theme=dark" />
+<img src="https://skillicons.dev/icons?i=js,ts,python,cs,java&theme=dark" />
 
 <br><br>
 
@@ -157,13 +160,23 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 **Backend & Data** &nbsp;·&nbsp; *Backend y datos*
 
-<img src="https://skillicons.dev/icons?i=nodejs,express,laravel,mysql,postgres,mongodb,firebase&theme=dark" />
+<img src="https://skillicons.dev/icons?i=nodejs,express,dotnet,postgres,mysql,sqlite,mongodb&theme=dark" />
 
 <br><br>
 
-**DevOps & Tools** &nbsp;·&nbsp; *DevOps y herramientas*
+**Cloud & Infrastructure** &nbsp;·&nbsp; *Nube e infraestructura*
 
-<img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,postman,vercel,idea,androidstudio,vscode,figma&theme=dark" />
+<img src="https://skillicons.dev/icons?i=docker,supabase,cloudflare,vercel,githubactions,linux&theme=dark" />
+
+<br>
+
+`Neon` `Railway` `Render` `Cloudflare Workers` `Cloudflare R2` `cPanel` `Hostinger` `Sentry`
+
+<br><br>
+
+**Tools** &nbsp;·&nbsp; *Herramientas*
+
+<img src="https://skillicons.dev/icons?i=git,github,postman,vscode,figma,obsidian&theme=dark" />
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -175,16 +188,15 @@ de abajo corre sobre los mismos principios del estudio: claridad, propósito, im
 
 I work with AI in the loop, not around it. Most things I build start with the question of what can
 be automated, and increasingly that means writing **MCP servers inside the product** so an agent can
-operate it directly instead of a person clicking through screens. **Gestbot** already does this in
-GESTEK. The same approach is going into the aesthetic clinic, so the doctor can handle appointments,
-procedures and records by talking to an agent. **Ardy-IA** was built on local models with Ollama.
+operate it directly instead of a person clicking through screens. GESTEK has an OAuth2 (PKCE) + MCP
+connector, and the aesthetic clinic is integrating an MCP server that only an admin can authorize and that
+asks for confirmation before writing.
 
 *Trabajo con IA dentro del flujo, no alrededor. Casi todo lo que construyo empieza por la pregunta de
 qué se puede automatizar, y cada vez más eso significa escribir **servidores MCP dentro del producto**
-para que un agente lo opere directamente en vez de que una persona pase por pantallas. **Gestbot** ya
-hace esto en GESTEK. El mismo enfoque va para el consultorio estético, para que la doctora maneje
-citas, procedimientos e historias hablando con un agente. **Ardy-IA** se construyó sobre modelos
-locales con Ollama.*
+para que un agente lo opere directamente en vez de que una persona pase por pantallas. GESTEK tiene
+un conector OAuth2 (PKCE) + MCP, y el consultorio estético está integrando un servidor MCP que solo un
+administrador puede autorizar y que pide confirmación antes de escribir.*
 
 <div align="center">
 
@@ -200,18 +212,14 @@ locales con Ollama.*
 
 <div align="center">
 
-Open to internships, freelance work, and collaboration on products worth building.
+Ready to join a development team, full-time or freelance, and eager to keep learning.
 
-*Abierto a prácticas, trabajo freelance y colaboración en productos que valga la pena construir.*
+*Listo para sumarme a un equipo de desarrollo, a tiempo completo o freelance, y con ganas de seguir aprendiendo.*
 
 <br>
 
 <a href="mailto:juan.medina@hytrex.co">
 <img src="https://img.shields.io/badge/juan.medina@hytrex.co-E10600?style=for-the-badge&logo=maildotru&logoColor=white&labelColor=E10600" />
-</a>
-<br>
-<a href="mailto:Juan.Medina@estudiantesunibague.edu.co">
-<img src="https://img.shields.io/badge/Juan.Medina@estudiantesunibague.edu.co-1c1c1c?style=for-the-badge&logo=maildotru&logoColor=bbbbbb&labelColor=1c1c1c" />
 </a>
 <br>
 <a href="https://www.linkedin.com/in/juan-medina-40b3ba269">
