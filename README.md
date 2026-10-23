@@ -86,17 +86,17 @@ Neon + Cloudflare R2 + Railway, y de Render y Vercel a un despliegue propio con 
 
 <br>
 
-## Hytrex &nbsp;/&nbsp; Mi startup
+## Hytrex &nbsp;/&nbsp; Mi grupo de desarrollo
 
-**Co-founder & CEO.** Hytrex is a digital engineering studio I co-founded in Colombia. We turn ideas and
+**Co-founder & CEO.** Hytrex is a software development group I co-founded in Colombia. We turn ideas and
 business problems into high-impact technology, combining strategy, design, engineering and delivery
 into products that move a business rather than just demo well. Most of the work below runs on the
-same principles the studio is built on: clarity, purpose, impact.
+same principles the group is built on: clarity, purpose, impact.
 
-*Cofundador y CEO. Hytrex es un estudio de ingeniería digital que cofundé en Colombia. Convertimos ideas
+*Cofundador y CEO. Hytrex es un grupo de desarrollo de software que cofundé en Colombia. Convertimos ideas
 y problemas de negocio en tecnología de alto impacto, combinando estrategia, diseño, ingeniería y
 ejecución en productos que mueven el negocio y no solo lucen bien en un demo. Buena parte del trabajo
-de abajo corre sobre los mismos principios del estudio: claridad, propósito, impacto.*
+de abajo corre sobre los mismos principios del grupo: claridad, propósito, impacto.*
 
 <div align="center">
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
