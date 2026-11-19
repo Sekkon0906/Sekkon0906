@@ -40,21 +40,28 @@
 
 ## About &nbsp;/&nbsp; Sobre mí
 
-I'm a full-stack developer based in Colombia, ready to join a team and eager to keep learning. My
-experience is certified: with **Develovers Group** I worked on **GESTEK**, the white-label event
-platform that ran **FESTECH Ibagué 2026** for the City of Ibagué (4,485 tickets and 3,334 attendees
-through access control over three days), and from 2023 to 2026 I owned the platform of an
-**aesthetic medicine clinic** that is now in production. I choose infrastructure for cost and
-portability: I have moved projects from Supabase to Neon + Cloudflare R2 + Railway, and from Render
-and Vercel to a self-managed deployment built with GitHub Actions.
+I'm a full-stack developer based in Colombia with 3+ years building personal and client products
+(since 2023), from analysis and design to deployment and maintenance. I work with supervised agentic
+development, build automations and AI agents that take real actions, choose infrastructure for cost
+and portability (I have migrated projects off Supabase, Render and Vercel) and document architecture
+decisions. Ready to join a team and eager to keep learning.
 
-*Soy desarrollador full-stack en Colombia, listo para sumarme a un equipo y con ganas de seguir
-aprendiendo. Mi experiencia está certificada: con **Develovers Group** trabajé en **GESTEK**, la
-plataforma de eventos de marca blanca con la que se operó **FESTECH Ibagué 2026** para la Alcaldía
-de Ibagué (4.485 boletas y 3.334 asistentes con control de acceso en tres días), y de 2023 a 2026
-estuve a cargo de la plataforma de un **consultorio de medicina estética** que hoy está en
-producción. Elijo la infraestructura por costo y portabilidad: he migrado proyectos de Supabase a
-Neon + Cloudflare R2 + Railway, y de Render y Vercel a un despliegue propio con GitHub Actions.*
+- **Local and paid AI:** I work daily with paid models (Claude, OpenAI, Gemini) and local ones
+  (Ollama running qwen3 on my own GPU), and I build tool-using agents and MCP servers.
+- **Cloud training:** AWS Academy Graduate (Cloud Foundations and Cloud Developing) and 6 Google Cloud
+  badges. **Languages:** Spanish native, English B2.
+
+*Soy desarrollador full-stack en Colombia con más de 3 años construyendo productos propios y para
+clientes (desde 2023), del análisis y el diseño hasta el despliegue y el mantenimiento. Trabajo con
+desarrollo agéntico supervisado, construyo automatizaciones y agentes de IA que ejecutan acciones
+reales, elijo la infraestructura por costo y portabilidad (he migrado proyectos fuera de Supabase,
+Render y Vercel) y documento las decisiones de arquitectura. Listo para sumarme a un equipo y con
+ganas de seguir aprendiendo.*
+
+- ***IA local y de pago:** trabajo a diario con modelos de pago (Claude, OpenAI, Gemini) y locales
+  (Ollama con qwen3 en mi propia GPU), y construyo agentes con herramientas y servidores MCP.*
+- ***Formación en nube:** AWS Academy Graduate (Cloud Foundations y Cloud Developing) y 6 insignias
+  de Google Cloud. **Idiomas:** español nativo, inglés B2.*
 
 <div align="center">
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
@@ -110,10 +117,32 @@ de abajo corre sobre los mismos principios del grupo: claridad, propósito, impa
 
 | Role · Rol | Where · Dónde | When · Cuándo |
 |:--|:--|:--:|
-| **Software Developer** — GESTEK, white-label event platform<br>*Desarrollador de software — GESTEK, plataforma de eventos de marca blanca* | Develovers Group S.A.S. | `Mar–Jul 2026` |
+| **Software Developer** — [GESTEK](https://github.com/BBMC-S-S-A/gestor-eventos-frontend), white-label event platform<br>*Desarrollador de software — GESTEK, plataforma de eventos de marca blanca* | Develovers Group S.A.S. | `Mar–Jul 2026` |
 | **Full-Stack Developer** — clinical web platform<br>*Desarrollador full-stack — plataforma web clínica* | Consultorio Estético Dra. Julieth Medina | `2023–2026` |
 
 </div>
+
+**GESTEK — key highlight: FESTECH Ibagué 2026.** GESTEK ran the entire process of the City of
+Ibagué's event (Sep 17–19), from registration and ticketing to door access control: **4,485 tickets,
+3,334 check-ins, 1,555 people on the peak day and bursts of 67 entries in 5 minutes through a single
+door.** My role: technical analysis, design, implementation and integration with supervised agentic
+workflows. JWT-signed QR tickets, door control with re-entry, badge printing, Mercado Pago, an OAuth2
+(PKCE) + MCP connector and 1,800+ automated tests. React + Vite (PWA) → Express 5 on cPanel → Supabase
+Postgres, built with GitHub Actions.
+
+*GESTEK — experiencia más destacada: FESTECH Ibagué 2026. GESTEK gestionó todo el proceso del evento de
+la Alcaldía de Ibagué (17–19 sep.), desde el registro y la emisión de boletas hasta el control de
+acceso en puerta: **4.485 boletas, 3.334 ingresos, 1.555 personas en el día pico y picos de 67 ingresos
+en 5 minutos por una sola puerta.***
+
+**Clinical platform (2023–2026).** I owned analysis, design, development, launch and maintenance:
+booking, e-signed informed consent, admin analytics and an AI copilot; MCP server in integration.
+Moved it off Supabase to Next.js 16 on Vercel → Express on Railway → Neon Postgres + Cloudflare R2
+(about USD 5/month) with custom JWT auth.
+
+*Plataforma clínica (2023–2026): a cargo de toda la plataforma, con agendamiento, consentimiento con
+firma electrónica, analítica y copiloto de IA; la migré fuera de Supabase a Neon + R2 + Railway +
+Vercel (unos 5 USD/mes) con autenticación propia.*
 
 <div align="center">
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
@@ -127,14 +156,33 @@ de abajo corre sobre los mismos principios del grupo: claridad, propósito, impa
 
 | Project · Proyecto | What it is · Qué es | Architecture & tools · Arquitectura y herramientas |
 |:--|:--|:--|
-| [**GESTEK**](https://github.com/BBMC-S-S-A/gestor-eventos-frontend) | White-label event platform: JWT-signed QR tickets, door control with re-entry, badge printing, Mercado Pago, OAuth2 + MCP connector, 1,800+ automated tests. Ran FESTECH Ibagué 2026.<br>*Plataforma de eventos de marca blanca: boletas con QR firmado, control de puerta con reingreso, escarapelas, Mercado Pago y conector OAuth2 + MCP. Operó FESTECH Ibagué 2026.* | React + Vite (PWA) → Express 5 on cPanel → Supabase Postgres. GitHub Actions, Sentry. *Before: Vercel + Render.* |
-| [**Consultorio Estético**](https://github.com/Sekkon0906/consultorioEstetico-vm) | Clinic platform: booking, e-signed consent, admin analytics and an AI copilot; MCP server in integration.<br>*Plataforma clínica: agendamiento, consentimiento con firma electrónica, analítica y copiloto de IA; servidor MCP en integración.* | Next.js 16 on Vercel → Express on Railway → Neon Postgres + Cloudflare R2. Own JWT auth. *Before: Supabase.* |
+| **New Blood Premium BARF** | End-to-end sales automation for a dog-food company: order panel, an agent that closes the whole sale over WhatsApp and a daily reorder reminder.<br>*Automatización de ventas para una empresa de alimento para perros: panel de pedidos, agente que atiende la venta completa por WhatsApp y aviso diario de recompra.* | React, Supabase, n8n, LangChain, OpenAI, Whapi.cloud. |
+| **SorteosCCM** | Live raffle platform for the Colombian Paso Horse community.<br>*Plataforma de rifas en producción para la comunidad del Caballo Colombiano de Paso.* | Angular 21 on Hostinger → Supabase (RLS, Edge Functions, pg_cron), Resend. |
+| **Atenea** | AI agent microservice for any business: the client app defines profile, context and tools; the agent runs them through HMAC-signed webhooks. Fallback model, Whisper voice notes, token quotas, per-user history and a control panel.<br>*Microservicio de agentes de IA para cualquier negocio: la app cliente define perfil, contexto y herramientas, y el agente las ejecuta por webhook firmado con HMAC.* | Node.js, TypeScript, Hono, PostgreSQL, Groq, Ollama, Anthropic, Whisper, Railway. |
+| **MeDinero** | Personal finance PWA for iPhone: logs expenses by voice (Siri), receipt photo or bank notifications, tracks debts and installments, reads payslips; assistant with a 3D avatar powered by Atenea.<br>*App de finanzas personales: gastos por voz, foto del recibo o avisos del banco, deudas y cuotas, lectura de nómina y asistente con avatar 3D sobre Atenea.* | Next.js 15, PostgreSQL with RLS, Better Auth, Tesseract.js (OCR), three.js, Railway. |
 | [**DevUP**](https://github.com/BBMC-S-S-A/DevUP) | Command center for software teams: E2E-encrypted voice/video, tasks, credentials vault, MCP server.<br>*Centro de mando para equipos: voz y video cifrados, tareas, bóveda de credenciales y servidor MCP.* | Fastify + Next.js 15, PostgreSQL 17 with RLS, WebRTC, Docker, Railway, Cloudflare Workers. |
 | [**Ablaze**](https://github.com/BBMC-S-S-A/Ablaze) | Offline-first training PWA with a deterministic rule engine.<br>*PWA de entrenamiento offline-first con motor de reglas determinista.* | Expo, SQLite WASM on OPFS, Express 5, Drizzle, PostgreSQL. |
 | [**Wallnut**](https://github.com/Sekkon0906/wallnut) | Mobile campus platform: digitizes university activities and introduces a positive-points economy, QR attendance and a leaderboard.<br>*Plataforma móvil del campus: digitaliza las actividades universitarias con una economía de puntos positivos, asistencia por QR y ranking.* | Expo / React Native, Express, hash-chained points ledger. |
-| **SorteosCCM** | Live raffle platform for the Colombian Paso Horse community.<br>*Plataforma de rifas en producción para la comunidad del Caballo Colombiano de Paso.* | Angular 21 on Hostinger → Supabase (RLS, Edge Functions, pg_cron), Resend. |
+| [**Ardy-IA**](https://github.com/Sekkon0906/Ardy-IA) | AI language tutor with RAG over indexed web search, conversation memory and voice input.<br>*Tutor de idiomas con IA: RAG sobre búsqueda web indexada, memoria de conversación y entrada por voz.* | Python, FastAPI, Groq (Llama 3.1), ChromaDB, faster-whisper. |
 
 <a href="https://github.com/Sekkon0906?tab=repositories">See all repositories · Ver todos los repositorios</a>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
+
+</div>
+
+<br>
+
+## Certifications &amp; Badges &nbsp;/&nbsp; Certificaciones e insignias
+
+<div align="center">
+
+| Credential · Credencial | Issuer · Emisor | Date · Fecha | Verify · Verificar |
+|:--|:--|:--:|:--:|
+| **AWS Academy Graduate — Cloud Developing** · 40 h | Amazon Web Services | `Nov 2026` | [Credly](https://www.credly.com/go/V1s0sIQN) |
+| **AWS Academy Graduate — Cloud Foundations** · 20 h | Amazon Web Services | `Apr 2025` | [Credly](https://www.credly.com/go/rGBo51yY) |
+| **Introduction to Scrum Master Training** · 6 h | Coursera · LearnQuest | `Aug 2025` | [Coursera](https://coursera.org/verify/EB0KJ675QA3E) |
+| **Google Cloud — 6 completion badges**<br>Digital Transformation · Exploring Data Transformation · Innovating with AI · Infrastructure and Application Modernization · Trust and Security · Scaling with Operations | Google Cloud | `Apr 2025` | [Google Skills](https://www.skills.google/public_profiles/ca1e6001-8392-4f69-8495-a233333f2fcd) |
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:000000,50:E10600,100:000000&height=2" />
 
@@ -197,6 +245,20 @@ qué se puede automatizar, y cada vez más eso significa escribir **servidores M
 para que un agente lo opere directamente en vez de que una persona pase por pantallas. GESTEK tiene
 un conector OAuth2 (PKCE) + MCP, y el consultorio estético está integrando un servidor MCP que solo un
 administrador puede autorizar y que pide confirmación antes de escribir.*
+
+**My AI development environment.** I feed it with my own Claude Code skills (architecture, UX, model
+choice, legal radar and memory) that I use across all my repos, and with an Obsidian vault of about
+400 notes that works as a **knowledge graph**: a map per project and a summary and importance level
+per note, so the agent reads only what it needs. Every session leaves its log and decisions, and
+audits run as multi-agent workflows (analyst and verifier). I run paid models (Claude, OpenAI, Gemini)
+and local ones (Ollama with qwen3 on my own GPU).
+
+*Mi entorno de desarrollo con IA. Lo alimento con skills propias para Claude Code (arquitectura, UX,
+elección de modelo, radar legal y memoria) que uso en todos mis repos, y con una bóveda de Obsidian de
+unas 400 notas que funciona como **grafo de conocimiento**: un mapa por proyecto y un resumen e
+importancia por nota, para que el agente lea solo lo que necesita. Cada sesión deja su bitácora y sus
+decisiones, y las auditorías corren con flujos multiagente (analista y verificador). Uso modelos de
+pago (Claude, OpenAI, Gemini) y locales (Ollama con qwen3 en mi propia GPU).*
 
 <div align="center">
 
