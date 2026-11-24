@@ -27,7 +27,7 @@
       <text class="f label" x="345.66666666666663" y="144" text-anchor="middle" fill="#4a4a4a">PULL REQUESTS</text>
       <animate attributeName="opacity" from="0" to="1" begin="0.16s" dur="0.5s" fill="freeze"/>
     </g><line x1="410" y1="66" x2="410" y2="150" stroke="#232323"/><g opacity="0">
-      <text class="f value" x="474.3333333333333" y="98" text-anchor="middle" fill="#ffffff">16</text>
+      <text class="f value" x="474.3333333333333" y="98" text-anchor="middle" fill="#ffffff">17</text>
       <text class="f label" x="474.3333333333333" y="124" text-anchor="middle" fill="#8a8a8a">REPOSITORIES</text>
       <text class="f label" x="474.3333333333333" y="144" text-anchor="middle" fill="#4a4a4a">REPOSITORIOS</text>
       <animate attributeName="opacity" from="0" to="1" begin="0.24s" dur="0.5s" fill="freeze"/>
